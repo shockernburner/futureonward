@@ -30,4 +30,4 @@ const splitText = (elem, options = { split: 'word' }) => {
       elem.appendChild(document.createTextNode(' '));
     };
   };
-export default splitText;
+return splitText;
