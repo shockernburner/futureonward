@@ -176,7 +176,7 @@
 			   var arr = a.join(" ");
 			   return arr;	
 		}
-		
+		/*
 		function splitLines(userInput){
 		   
 		   var count = element.children(".word-measure").length;
@@ -196,7 +196,7 @@
 		   return textAcc;
 		   
 		}
-		
+		*/
 		function splitSentences(userInput){
 			
 			 var regExp = /[^\.!\?]+[\.!\?]+/g;
