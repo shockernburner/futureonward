@@ -179,20 +179,21 @@
 		
 		function splitLines(userInput){
 		   
-		   var count = element.children(".word-measure").length;
-		   var lineAcc = [element.children(".word-measure:eq(0)").text()];
+		   //var count = element.children(".word-measure").length;
+       var count = userInput.children(".word-measure").length;
+		   var lineAcc = [userInput.children(".word-measure:eq(0)").text()];
 		   var textAcc = [];
 		   for(var i=1; i<count; i++){
-			      var prevY = element.children(".word-measure:eq("+(i-1)+")").offset().top;
-			   if(element.children(".word-measure:eq("+i+")").offset().top==prevY){
-			         lineAcc.push(element.children(".word-measure:eq("+i+")").text());
+			      var prevY = userInput.children(".word-measure:eq("+(i-1)+")").offset().top;
+			   if(userInput.children(".word-measure:eq("+i+")").offset().top==prevY){
+			         lineAcc.push(userInput.children(".word-measure:eq("+i+")").text());
 			   } 
 			   else {
 			     textAcc.push({text: lineAcc.join(" "), top: prevY});
-			     lineAcc = [element.children(".word-measure:eq("+i+")").text()];
+			     lineAcc = [userInput.children(".word-measure:eq("+i+")").text()];
 			   }
 		   }
-		   textAcc.push({text: lineAcc.join(" "), top: element.children(".word-measure:last").offset().top});
+		   textAcc.push({text: lineAcc.join(" "), top: userInput.children(".word-measure:last").offset().top});
 		   return textAcc;
 		   
 		}
