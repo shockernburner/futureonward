@@ -168,14 +168,19 @@ h2 * {
     </div>
   </section>
   </main>
-  <script type="module">
-import { splitText } from './js/splitText.js';
+  <script>
 let sections = document.querySelectorAll("section"),
   images = document.querySelectorAll(".bg"),
   headings = gsap.utils.toArray(".section-heading"),
   outerWrappers = gsap.utils.toArray(".outer"),
   innerWrappers = gsap.utils.toArray(".inner"),
-  splitHeadings = headings.map(heading => new splitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+  //splitHeadings = headings.map(heading => new splitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+  
+  splitHeadings = headings.map(function(index, heading) {
+    let $heading = $(heading); // Convert to jQuery object
+    $heading.splitText({ type: "chars,words,lines", linesClass: "clip-text" });
+    return $heading.data('splitWords'); // Retrieve the array
+  }).get(),
   currentIndex = -1,
   wrap = gsap.utils.wrap(0, sections.length),
   animating;
