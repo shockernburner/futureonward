@@ -29,5 +29,6 @@ const splitText = (elem, options = { split: 'word' }) => {
       };
       elem.appendChild(document.createTextNode(' '));
     };
+    return elem;
   };
 export default splitText;
