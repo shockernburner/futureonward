@@ -169,6 +169,7 @@ h2 * {
   </section>
   </main>
   <script>
+    $(document).ready(function() {
 let sections = document.querySelectorAll("section"),
   images = document.querySelectorAll(".bg"),
   headings = gsap.utils.toArray(".section-heading"),
@@ -243,6 +244,7 @@ window.addEventListener('load', (event) => {
 });
 
 console.log("Javascript Loaded"); //check if javascript is loading.
+    });
   </script>
   </body>
 </html>
