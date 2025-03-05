@@ -172,8 +172,10 @@ h2 * {
   </main>
   <script is:inline src="./js/gsap.min.js"></script>
   <script is:inline src="./js/Observer.min.js"></script>
-<script type="module">
-import { splitText } from './js/splitText.min.js';
+  <script type="module">
+    import { splitText } from './js/splitText.min.js'
+  </script>
+<script>
 gsap.registerPlugin(SplitText);
 let sections = document.querySelectorAll("section"),
     images = document.querySelectorAll(".bg"),
