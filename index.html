@@ -170,11 +170,15 @@ h2 * {
     </div>
   </section>
   </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/Observer.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/splittext@2.0.0/splitText.min.js"></script>
   <script>
-
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(SplitText)
 let sections = document.querySelectorAll("section"),
     images = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
