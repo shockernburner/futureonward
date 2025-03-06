@@ -17,40 +17,21 @@ body {
 .container {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	perspective:500px;
-	width:100%;
-	height:100%;
-	position:absolute;
-	margin:0 0 0 0;
+	width:300px;
+	height:350px;
+	position:relative;
+	margin:100px 0 0 35%;
 	transition:all 2s ease-in-out;
 	transform-style:preserve-3d;
+
 }
 .container > div {
-	position:relative;
-	width:90%;
-	height:100%;
-	top:0;
-	color:#777;
-	border:1px solid #CCC;
-	border-radius:10px;
-	font-family:arial;
-	text-align:center;
-	background:#EEE;
-}
-.containerback {
-	box-shadow:0 5px 10px rgba(0,0,0,.5);
-	perspective:500px;
-	width:100%;
-	height:100%;
+
 	position:absolute;
-	margin:0 0 0 0;
-	transition:all 2s ease-in-out;
-	transform-style:preserve-3d;
-}
-.containerback > div {
-	position:relative;
-	width:90%;
+	width:100%;
 	height:100%;
 	top:0;
+	left:0;
 	color:#777;
 	border:1px solid #CCC;
 	border-radius:10px;
@@ -58,16 +39,16 @@ body {
 	text-align:center;
 	background:#EEE;
 }
-.front {
-  z-index: 999;
+.container .front {
+	z-index:999;
 	backface-visibility:hidden;
 }
-.back {
-  z-index: 888;
+.container .back {
+	z-index:888;
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
 }
-.front header {
+.container .front header{
 	box-shadow:0 2px 5px rgba(0,0,0,.2);
 	border-radius:10px 10px 0 0;
 	background:#444;
@@ -75,7 +56,7 @@ body {
 	width:100%;
 	height:80px;
 }
-.front header img {
+.container .front header img {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	position:relative;
 	top:25px;
@@ -83,16 +64,16 @@ body {
 	width:100px;
 	border-radius:50%;
 }
-.front h3 {
+.container .front h3 {
 	text-shadow:4px 3px 8px #CCC;
 	margin-bottom:10px;
 }
-.front p {
+.container .front p {
 	margin-top:0;
 	margin:0 auto;
 	line-height:1.5;
 }
-.front span {
+.container .front span {
 	text-shadow:0 2px 4px #260060;
 	text-transform:capitalize;
 	display:inline-block;
@@ -101,132 +82,17 @@ body {
 	color:#260060;
 }
 
-.back ul {
+.container .back ul {
 	padding:0;
-	list-style:square;
+	list-style:none;
 	line-height:2;
 
 }
 
-.container .container2 .front2 {
-  z-index: 777;
-	backface-visibility:hidden;
-}
-.container .container2 .back2 {
-  z-index: 666;
+.container:hover {
 	transform:rotateY(180deg);
-	backface-visibility:hidden;
-}
-.container .container2 .front2 header{
-	box-shadow:0 2px 5px rgba(0,0,0,.2);
-	border-radius:10px 10px 0 0;
-	background:#444;
-	margin-bottom:55px;
-	width:100%;
-	height:80px;
-}
-.container .container2 .front2 header img {
-	box-shadow:0 5px 10px rgba(0,0,0,.5);
-	position:relative;
-	top:25px;
-	height:100px;
-	width:100px;
-	border-radius:50%;
-}
-.container .container2 .front2 h3 {
-	text-shadow:4px 3px 8px #CCC;
-	margin-bottom:10px;
-}
-.container .container2 .front2 p {
-	margin-top:0;
-	margin:0 auto;
-	line-height:1.5;
-}
-.container .container2 .front2 span {
-	text-shadow:0 2px 4px #260060;
-	text-transform:capitalize;
-	display:inline-block;
-	font-weight:bold;
-	margin-top:40px;
-	color:#260060;
 }
 
-.container .container2 .back2 ul {
-	padding:0;
-	list-style:square;
-	line-height:2;
-
-}
-
-.container .container3 .front3 {
-  z-index: 555;
-	backface-visibility:hidden;
-}
-.container .container3 .back3 {
-  z-index: 444;
-	transform:rotateY(180deg);
-	backface-visibility:hidden;
-}
-.container .container3 .front3 header {
-	box-shadow:0 2px 5px rgba(0,0,0,.2);
-	border-radius:10px 10px 0 0;
-	background:#444;
-	margin-bottom:55px;
-	width:100%;
-	height:80px;
-}
-.container .container3 .front3 header img {
-	box-shadow:0 5px 10px rgba(0,0,0,.5);
-	position:relative;
-	top:25px;
-	height:100px;
-	width:100px;
-	border-radius:50%;
-}
-.container .container3 .front3 h3 {
-	text-shadow:4px 3px 8px #CCC;
-	margin-bottom:10px;
-}
-.container .container3 .front3 p {
-	margin-top:0;
-	margin:0 auto;
-	line-height:1.5;
-}
-.container .container3 .front3 span {
-	text-shadow:0 2px 4px #260060;
-	text-transform:capitalize;
-	display:inline-block;
-	font-weight:bold;
-	margin-top:40px;
-	color:#260060;
-}
-
-.container .container3 .back3 ul {
-	padding:0;
-	list-style:square;
-	line-height:2;
-
-}
-#firstfront:hover {
-	transform:rotateY(180deg);
-}
-#firstfront:hover ~ #firstback {
-	transform:rotateY(180deg);
-}
-#firstback:hover {
-	transform:rotateY(180deg);
-}
-#firstback:hover ~ #firstfront {
-	transform:rotateY(180deg);
-}
-.container2:hover {
-  backface-visibility: hidden;
-	transform:rotateY(180deg);
-}
-.container3:hover {
-  backface-visibility: hidden;
-	transform:rotateY(180deg);
-}
     </style>
 </head>
 <body>
@@ -235,7 +101,6 @@ body {
     </header>
 <main>
 		<div class="container" id="firstfront">
-      <!--<div class="container0">-->
 			<div class="front">
 				<header>
 					<img src="./images/softdev.jpg" alt="Software Development">
@@ -244,8 +109,6 @@ body {
 				<p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
 				<span>Details</span>
 			</div>
-      </div>
-      <div class="containerback" id="firstback">
 			<div class="back">
 				<ul>
 					<li>Documents and Media Archiving for Armed Forces</li>
@@ -256,42 +119,6 @@ body {
         <p style="color: black;">Contact us if you are interested</p>
 			</div>
     </div>
-      <!--</div>-->
-      <!--
-      <div class="container2">
-      <div class="front2">
-				<header>
-					<img src="./images/edu.jpg" alt="EdTech">
-				</header>
-				<h3 style="color: black;">Education Technology</h3>
-				<p>We provide industry-designed online training, equipping you with the skills employers are actively seeking</p>
-				<span>Details</span>
-			</div>
-			<div class="back2">
-				<ul>
-					<li>Unlock your career potential with Eduskiller. Learn at your own pace, demonstrate your expertise, and connect directly with top companies through live video interviews and exclusive recruitment opportunities.</li>
-				</ul>
-        <p style="color: black;">Contact us if you are interested in either learning, or earning</p>
-			</div>
-    </div>
-    <div class="container3">
-      <div class="front3">
-				<header>
-					<img src="./images/franchise.jpeg" alt="Franchise">
-				</header>
-				<h3 style="color: black;">Franchise Distribution</h3>
-				<p>Own a piece of EL&N London in Dhaka</p>
-				<span>Details</span>
-			</div>
-			<div class="back3">
-				<ul>
-					<li>We're offering sub-franchises for Bangladesh's flagship EL&N cafe. Bring the world's most Instagrammable cafe to your city!</li>
-				</ul>
-        <p style="color: black;">Contact for details</p>
-			</div>
-    </div>
-    -->
-
   </main>
   </body>
 </html>
