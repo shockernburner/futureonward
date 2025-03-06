@@ -18,7 +18,7 @@ body {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	perspective:500px;
 	width:100%;
-	height:350px;
+	height:100%;
 	position:relative;
 	margin:100px 0 0 35%;
 	transition:all 2s ease-in-out;
@@ -27,7 +27,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .container > div {
-  padding: 2pt;
 	position:relative;
 	width:100%;
 	height:100%;
@@ -90,11 +89,11 @@ body {
 }
 
 .container .front2 {
-	z-index:999;
+	z-index:990;
 	backface-visibility:hidden;
 }
 .container .back2 {
-	z-index:888;
+	z-index:880;
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
 }
@@ -140,11 +139,11 @@ body {
 }
 
 .container .front3 {
-	z-index:999;
+	z-index:900;
 	backface-visibility:hidden;
 }
 .container .back3 {
-	z-index:888;
+	z-index:800;
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
 }
