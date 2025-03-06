@@ -99,7 +99,7 @@
             text-transform: capitalize;
             display: inline-block;
             font-weight: bold;
-            margin-top: 40px;
+            margin-bottom: 20px;
             color: #260060;
         }
 
@@ -129,6 +129,39 @@
                 width: calc(100% - 40px); /* One card per row on very small screens */
             }
         }
+        footer {
+        background-color: #333;
+        color: white;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* Map Container */
+      .map-container {
+        width: 40%; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+      }
+
+      /* Contact Info & WhatsApp */
+      .contact-info {
+        text-align: center;
+      }
+
+      /* Copyright */
+      .copyright {
+        text-align: center;
+        font-size: 0.8em;
+        padding-top: 10px; 
+      }
     </style>
 </head>
 <body>
@@ -143,7 +176,7 @@
                 </header>
                 <h3>Software Development</h3>
                 <p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
-                <span>Details</span>
+                <span>Hover for Details</span>
             </div>
             <div class="back">
                 <ul>
@@ -160,17 +193,15 @@
                 <header>
                     <img src="./images/edu.jpg" alt="EdTech">
                 </header>
-                <h3>Another Service</h3>
-                <p>Description of another service provided by Future Onward.</p>
-                <span>Details</span>
+                <h3>Education Technology</h3>
+                <p>We partner with leading companies to offer targeted online training programs</p>
+                <span>Hover for Details</span>
             </div>
             <div class="back">
                 <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                    <li>Eduskiller bridges the gap between industry and education, empowering students with in-demand skills. Complete courses at your own pace, and gain access to live video interviews and direct recruitment opportunities with our industry partners.</li>
                 </ul>
-                <p>Contact us for more information</p>
+                <p>Whether you want to learn, or earn, contact us!</p>
             </div>
         </div>
         <div class="container">
@@ -178,19 +209,50 @@
                 <header>
                     <img src="./images/franchise.jpeg" alt="Franchise">
                 </header>
-                <h3>Third Service</h3>
-                <p>Details about a third service offered by Future Onward.</p>
-                <span>Details</span>
+                <h3>Franchise Distribution</h3>
+                <p>Own a piece of EL&N London in Dhaka</p>
+                <span>Hover for Details</span>
             </div>
             <div class="back">
                 <ul>
-                    <li>Feature A</li>
-                    <li>Feature B</li>
-                    <li>Feature C</li>
+                    <li>We're offering sub-franchises for Bangladesh's flagship EL&N cafe. Bring the world's most Instagrammable cafe to your city!</li>
                 </ul>
                 <p>Reach out to us today!</p>
             </div>
         </div>
     </main>
+    <footer>
+      <div class="footer-content">
+  
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902881863651!2d90.41061061429264!3d23.750872294590197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8adadecb693%3A0x643e56778712e70c!2sFuture%20Onward%20OPC!5e0!3m2!1sen!2sbd!4v1699305698854!5m2!1sen!2sbd" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+  
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p>Future Onward OPC</p>
+          <p>House # 526 (5th Floor)</p>
+          <p>Abdur Sadique Road, Block # F</p>
+          <p>Bashundhara R/A, Dhaka 1229</p>
+          <p>Bangladesh</p>
+          <p>Phone: +8801746653647</p>
+          <p>Email: director@futureonward.com</p>
+          <a href="https://wa.me/+8613949048330?text=I'm%20interested%20for%20a%20call" target="_blank">WhatsApp</a> 
+        </div>
+  
+      </div>
+      <div class="copyright">
+        &copy; 2024 Future Onward OPC. All rights reserved.
+      </div>
+    </footer>
+  
 </body>
 </html>
