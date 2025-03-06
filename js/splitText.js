@@ -195,7 +195,12 @@
 			   }
 		   };
       };
+      try {
 		   textAcc.push({text: lineAcc.join(" "), top: element.children(".word-measure:last").offset().top});
+      }
+      catch(err) {
+        return textAcc;
+      }
 		   return textAcc;
 		   
 		}
