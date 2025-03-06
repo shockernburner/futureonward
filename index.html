@@ -211,10 +211,16 @@ body {
 	line-height:2;
 
 }
-.container:hover > div#containerback {
+#firstfront:hover {
 	transform:rotateY(180deg);
 }
-.containerback:hover {
+#firstfront:hover > #firstback {
+	transform:rotateY(180deg);
+}
+#firstback:hover {
+	transform:rotateY(180deg);
+}
+#firstback:hover > #firstfront {
 	transform:rotateY(180deg);
 }
 .container2:hover {
@@ -232,7 +238,7 @@ body {
       <div style="color: ghostwhite; font-size: 3dvi; font-family:Arial, Helvetica, sans-serif; text-align: center;">FUTURE ONWARD</div>
     </header>
 <main>
-		<div class="container">
+		<div class="container" id="firstfront">
       <!--<div class="container0">-->
 			<div class="front">
 				<header>
@@ -243,7 +249,7 @@ body {
 				<span>Details</span>
 			</div>
       </div>
-      <div class="containerback">
+      <div class="containerback" id="firstback">
 			<div class="back">
 				<ul>
 					<li>Documents and Media Archiving for Armed Forces</li>
