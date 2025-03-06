@@ -4,124 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Onward</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/splitText.js"></script>
-    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://assets.codepen.io/16327/Observer.min.js"></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-
-* {
-  box-sizing: border-box;
-  user-select: none;
+      body{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  background-color:#000000;
+  color:white;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
+.effect{
+  position:relative;
+  color:white;
+  padding:2rem;
+  background-image:linear-gradient(to right,crimson,purple,rebeccapurple);
+  width:200px;
+  height:100px;
+  border-radius:20px;
+  font-size:2rem;
+  transform-style: preserve-3d;
+  transform:perspective(5000px) rotateX(-10deg) rotateY(45deg)
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  color: white;
-  background: black;
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
+.effect::before,
+.effect::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+}
+.effect::before{
+  background-image:linear-gradient(to right,white,lightgrey,grey);
+  display:block;
+  width:350px;
+  height:200px;
+  border-radius:inherit;
+  transform:translateZ(-60px);
 }
 
-h2 {
-  font-size: clamp(1rem, 5vw, 5rem);
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0.5em;
-  margin-right: -0.5em;
-  color: hsl(0, 0, 80%);
-  width: 90vw;
-  max-width: 1200px;
-}
-
-header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  width: 100%;
-  z-index: 3;
-  height: 7em;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(0.66rem, 2vw, 1rem);
-  letter-spacing: 0.5em;
-}
-
-section {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  visibility: hidden;
-
-  .outer,
-  .inner {
-    width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-  }
-
-  .bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-size: cover;
-    background-position: center;
-
-    h2 {
-      z-index: 2;
-    }
-
-    .clip-text {
-      overflow: hidden;
-    }
-  }
-}
-
-.first {
-  .bg {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-      url("./images/softdev.jpg");
-  }
-}
-
-.second {
-  .bg {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-      url("./images/edu.jpg");
-  }
-}
-
-.third {
-  .bg {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-      url("./images/franchise.jpeg");
-  }
-}
-
-.fourth {
-  .bg {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-      url("./images/contact.jpg");
-  }
-}
-
-h2 * {
-  will-change: transform;
+.effect::after{
+  top:50%;
+  left:50%;
+  transform:translateX(-40%) translateY(-45%) translateZ(-59px);
+  filter:blur(10px);
+  background-color:rgb(0,0,0,0.7);
+  display:block;
+  width:250px;
+  height:170px;
+  border-radius:inherit;
 }
     </style>
 </head>
@@ -131,120 +61,19 @@ h2 * {
     </header>
 <main>
   <section class="first">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg one">
-          <h2 class="section-heading">Website and App Development</h2>
-        </div>
-      </div>
+    <div class="effect">
+      Software Development
     </div>
-  
   </section>
   <section class="second">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Online Classes</h2>
-        </div>
-      </div>
-    </div>
+    
   </section>
   <section class="third">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Franchise Distribution & Resell</h2>
-        </div>
-      </div>
-    </div>
+   
   </section>
   <section class="fourth">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Contact us</h2>
-        </div>
-      </div>
-    </div>
+   
   </section>
   </main>
-  <script>
-    $(document).ready(function() {
-let sections = document.querySelectorAll("section"),
-  images = document.querySelectorAll(".bg"),
-  headings = gsap.utils.toArray(".section-heading"),
-  outerWrappers = gsap.utils.toArray(".outer"),
-  innerWrappers = gsap.utils.toArray(".inner"),
-  //splitHeadings = headings.map(heading => new splitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
-  
-  splitHeadings = headings.map(function(index, heading) {
-    let $heading = $(heading); // Convert to jQuery object
-    $heading.splitText({ type: "chars,words,lines", linesClass: "clip-text" });
-    return $heading.data('splitWords'); // Retrieve the array
-  }).get(),
-  currentIndex = -1,
-  wrap = gsap.utils.wrap(0, sections.length),
-  animating;
-
-gsap.set(outerWrappers, { yPercent: 100 });
-gsap.set(innerWrappers, { yPercent: -100 });
-
-function gotoSection(index, direction) {
-  index = wrap(index); // make sure it's valid
-  animating = true;
-  let fromTop = direction === -1,
-      dFactor = fromTop ? -1 : 1,
-      tl = gsap.timeline({
-        defaults: { duration: 1.25, ease: "power1.inOut" },
-        onComplete: () => animating = false
-      });
-  if (currentIndex >= 0) {
-    // The first time this function runs, current is -1
-    gsap.set(sections[currentIndex], { zIndex: 0 });
-    tl.to(images[currentIndex], { yPercent: -15 * dFactor })
-      .set(sections[currentIndex], { autoAlpha: 0 });
-  }
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-  tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
-      yPercent: i => i ? -100 * dFactor : 100 * dFactor
-    }, { 
-      yPercent: 0 
-    }, 0)
-    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-    .fromTo(splitHeadings[index].chars, { 
-        autoAlpha: 0, 
-        yPercent: 150 * dFactor
-    }, {
-        autoAlpha: 1,
-        yPercent: 0,
-        duration: 1,
-        ease: "power2",
-        stagger: {
-          each: 0.02,
-          from: "random"
-        }
-      }, 0.2);
-
-  currentIndex = index;
-}
-
-Observer.create({
-  type: "wheel,touch,pointer",
-  wheelSpeed: -1,
-  onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-  onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-  tolerance: 10,
-  preventDefault: true
-});
-
-
-window.addEventListener('load', (event) => {
-    console.log('Page is fully loaded');
-    gotoSection(0, 1);
-});
-
-console.log("Javascript Loaded"); //check if javascript is loading.
-    });
-  </script>
   </body>
 </html>
