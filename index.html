@@ -5,54 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Onward</title>
     <style>
-body{
-  height:100vh;
-  display:grid;
-  place-items:center;
-  background-color:#000000;
-  color:white;
+* {
+  border-sizing: border-box;
+}
+body {
+	perspective:1000px;
+	background-image: url('./images/home.jpg');
+}
+.container {
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+	perspective:500px;
+	width:300px;
+	height:350px;
+	position:relative;
+	margin:100px 0 0 35%;
+	transition:all 2s ease-in-out;
+	transform-style:preserve-3d;
+
+}
+.container > div {
+
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	color:#777;
+	border:1px solid #CCC;
+	border-radius:10px;
+	font-family:arial;
+	text-align:center;
+	background:#EEE;
+}
+.container .front {
+	z-index:999;
+	backface-visibility:hidden;
+}
+.container .back {
+	z-index:888;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+}
+.container .front header{
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	border-radius:10px 10px 0 0;
+	background:#444;
+	margin-bottom:55px;
+	width:100%;
+	height:80px;
+}
+.container .front header img {
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+	position:relative;
+	top:25px;
+	height:100px;
+	width:100px;
+	border-radius:50%;
+}
+.container .front h3 {
+	text-shadow:4px 3px 8px #CCC;
+	margin-bottom:10px;
+}
+.container .front p {
+	margin-top:0;
+	margin:0 auto;
+	line-height:1.5;
+}
+.container .front span {
+	text-shadow:0 2px 4px #260060;
+	text-transform:capitalize;
+	display:inline-block;
+	font-weight:bold;
+	margin-top:40px;
+	color:#260060;
 }
 
-.effect{
-  position:relative;
-  color:white;
-  padding:2rem;
-  background-image:linear-gradient(to right,crimson,purple,rebeccapurple);
-  width:200px;
-  height:100px;
-  border-radius:20px;
-  font-size:2rem;
-  transform-style: preserve-3d;
-  transform:perspective(5000px) rotateX(-10deg) rotateY(45deg)
+.container .back ul {
+	padding:0;
+	list-style:none;
+	line-height:2;
+
 }
 
-.effect::before,
-.effect::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-}
-.effect::before{
-  background-image:linear-gradient(to right,white,lightgrey,grey);
-  display:block;
-  width:350px;
-  height:200px;
-  border-radius:inherit;
-  transform:translateZ(-60px);
+.container:hover {
+	transform:rotateY(180deg);
 }
 
-.effect::after{
-  top:50%;
-  width: 100%;
-  transform:translateX(-40%) translateY(-45%) translateZ(-59px);
-  filter:blur(10px);
-  background-color:rgb(0,0,0,0.7);
-  display:block;
-  width:250px;
-  height:170px;
-  border-radius:inherit;
-}
     </style>
 </head>
 <body>
@@ -60,26 +98,27 @@ body{
       <div>FUTURE ONWARD</div>
     </header>
 <main>
-  <section class="first">
-    <div class="effect">
-      Software Development
-    </div>
-  </section>
-  <section class="second">
-    <div class="effect">
-      Academic
-    </div>
-  </section>
-  <section class="third">
-    <div class="effect">
-      Franchise Distribution
-    </div>
-  </section>
-  <section class="fourth">
-    <div class="effect">
-      Contact Us
-    </div>
-  </section>
+  <body>
+		<div class="container">
+			<div class="front">
+				<header>
+					<img src="./images/softdev.jpg" alt="Software Development">
+				</header>
+				<h3>Software Development</h3>
+				<p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
+				<span>Details</span>
+			</div>
+			<div class="back">
+				<ul>
+					<li>Documents and Media Archiving for Armed Forces</li>
+					<li>Aviation Inventory Management, Lifecycle Management and Warning System</li>
+					<li>Commercial Credit Scoring Prediction System</li>
+					<li>Logistics Automation System</li>
+				</ul>
+        <p>Contact us if you are interested</p>
+			</div>
+		</div>
+
   </main>
   </body>
 </html>
