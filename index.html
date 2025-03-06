@@ -19,7 +19,7 @@ body {
 	perspective:500px;
 	width:100%;
 	height:100%;
-	position:relative;
+	position:absolute;
 	margin:0 0 0 0;
 	transition:all 2s ease-in-out;
 	transform-style:preserve-3d;
@@ -27,6 +27,30 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .container > div {
+	position:relative;
+	width:90%;
+	height:100%;
+	top:0;
+	color:#777;
+	border:1px solid #CCC;
+	border-radius:10px;
+	font-family:arial;
+	text-align:center;
+	background:#EEE;
+}
+.containerback {
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+	perspective:500px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin:0 0 0 0;
+	transition:all 2s ease-in-out;
+	transform-style:preserve-3d;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.containerback > div {
 	position:relative;
 	width:90%;
 	height:100%;
@@ -187,8 +211,16 @@ body {
 	line-height:2;
 
 }
-
 .container:hover {
+	transform:rotateY(180deg);
+}
+.container:hover > div#containerback {
+	transform:rotateY(180deg);
+}
+.containerback:hover {
+	transform:rotateY(180deg);
+}
+.containerback:hover > div#container {
 	transform:rotateY(180deg);
 }
 .container2:hover {
@@ -217,7 +249,7 @@ body {
 				<span>Details</span>
 			</div>
       </div>
-      <div class="container">
+      <div class="containerback">
 			<div class="back">
 				<ul>
 					<li>Documents and Media Archiving for Armed Forces</li>
@@ -263,7 +295,6 @@ body {
 			</div>
     </div>
     -->
-		</div>
 
   </main>
   </body>
