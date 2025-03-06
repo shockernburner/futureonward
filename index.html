@@ -17,7 +17,7 @@ body {
 .container {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	perspective:500px;
-	width:300px;
+	width:100%;
 	height:350px;
 	position:relative;
 	margin:100px 0 0 35%;
@@ -89,10 +89,115 @@ body {
 
 }
 
-.container:hover {
+.container .front2 {
+	z-index:999;
+	backface-visibility:hidden;
+}
+.container .back2 {
+	z-index:888;
 	transform:rotateY(180deg);
+	backface-visibility:hidden;
+}
+.container .front2 header{
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	border-radius:10px 10px 0 0;
+	background:#444;
+	margin-bottom:55px;
+	width:100%;
+	height:80px;
+}
+.container .front2 header img {
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+	position:relative;
+	top:25px;
+	height:100px;
+	width:100px;
+	border-radius:50%;
+}
+.container .front2 h3 {
+	text-shadow:4px 3px 8px #CCC;
+	margin-bottom:10px;
+}
+.container .front2 p {
+	margin-top:0;
+	margin:0 auto;
+	line-height:1.5;
+}
+.container .front2 span {
+	text-shadow:0 2px 4px #260060;
+	text-transform:capitalize;
+	display:inline-block;
+	font-weight:bold;
+	margin-top:40px;
+	color:#260060;
 }
 
+.container .back2 ul {
+	padding:0;
+	list-style:square;
+	line-height:2;
+
+}
+
+.container .front3 {
+	z-index:999;
+	backface-visibility:hidden;
+}
+.container .back3 {
+	z-index:888;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+}
+.container .front3 header{
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	border-radius:10px 10px 0 0;
+	background:#444;
+	margin-bottom:55px;
+	width:100%;
+	height:80px;
+}
+.container .front3 header img {
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+	position:relative;
+	top:25px;
+	height:100px;
+	width:100px;
+	border-radius:50%;
+}
+.container .front3 h3 {
+	text-shadow:4px 3px 8px #CCC;
+	margin-bottom:10px;
+}
+.container .front3 p {
+	margin-top:0;
+	margin:0 auto;
+	line-height:1.5;
+}
+.container .front3 span {
+	text-shadow:0 2px 4px #260060;
+	text-transform:capitalize;
+	display:inline-block;
+	font-weight:bold;
+	margin-top:40px;
+	color:#260060;
+}
+
+.container .back3 ul {
+	padding:0;
+	list-style:square;
+	line-height:2;
+
+}
+
+.front:hover {
+	transform:rotateY(180deg);
+}
+.front2:hover {
+	transform:rotateY(180deg);
+}
+.front3:hover {
+	transform:rotateY(180deg);
+}
     </style>
 </head>
 <body>
@@ -119,7 +224,7 @@ body {
 				</ul>
         <p style="color: black;">Contact us if you are interested</p>
 			</div>
-      <div class="front">
+      <div class="front2">
 				<header>
 					<img src="./images/edu.jpg" alt="EdTech">
 				</header>
@@ -127,11 +232,25 @@ body {
 				<p>We provide industry-designed online training, equipping you with the skills employers are actively seeking</p>
 				<span>Details</span>
 			</div>
-			<div class="back">
+			<div class="back2">
 				<ul>
 					<li>Unlock your career potential with Eduskiller. Learn at your own pace, demonstrate your expertise, and connect directly with top companies through live video interviews and exclusive recruitment opportunities.</li>
 				</ul>
         <p style="color: black;">Contact us if you are interested in either learning, or earning</p>
+			</div>
+      <div class="front3">
+				<header>
+					<img src="./images/franchise.jpeg" alt="Franchise">
+				</header>
+				<h3 style="color: black;">Franchise Distribution</h3>
+				<p>Own a piece of EL&N London in Dhaka</p>
+				<span>Details</span>
+			</div>
+			<div class="back2">
+				<ul>
+					<li>We're offering sub-franchises for Bangladesh's flagship EL&N cafe. Bring the world's most Instagrammable cafe to your city!</li>
+				</ul>
+        <p style="color: black;">Contact for details</p>
 			</div>
 		</div>
 
