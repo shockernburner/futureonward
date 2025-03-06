@@ -183,6 +183,7 @@
 		   var lineAcc = [element.children(".word-measure:eq(0)").text()];
 		   var textAcc = [];
        console.log(userInput, element);
+       if(element){
 		   for(var i=1; i<count; i++){
 			      var prevY = element.children(".word-measure:eq("+(i-1)+")").offset().top;
 			   if(element.children(".word-measure:eq("+i+")").offset().top==prevY){
@@ -192,7 +193,8 @@
 			     textAcc.push({text: lineAcc.join(" "), top: prevY});
 			     lineAcc = [element.children(".word-measure:eq("+i+")").text()];
 			   }
-		   }
+		   };
+      };
 		   textAcc.push({text: lineAcc.join(" "), top: element.children(".word-measure:last").offset().top});
 		   return textAcc;
 		   
