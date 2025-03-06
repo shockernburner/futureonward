@@ -5,120 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Onward</title>
     <style>
-* {
-  border-sizing: border-box;
-}
-body {
-	perspective:1000px;
-	background: url('./images/home.jpg') center;
-  background-size: cover;
-}
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            perspective: 1000px;
+            background: url('./images/home.jpg') center;
+            background-size: cover;
+            margin: 0; /* Remove default body margin */
+        }
 
-.container {
-	box-shadow:0 5px 10px rgba(0,0,0,.5);
-	perspective:500px;
-	width:300px;
-	height:350px;
-	position:relative;
-	margin:100px 0 0 35%;
-	transition:all 2s ease-in-out;
-	transform-style:preserve-3d;
+        header {
+            text-align: center;
+            color: ghostwhite;
+            font-size: 3dvi;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px 0; /* Add some padding to the header */
+        }
 
-}
-.container > div {
+        main {
+            display: flex; /* Use flexbox for side-by-side layout */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center; /* Center the cards horizontally */
+            padding: 20px; /* Add padding around the cards */
+        }
 
-	position:absolute;
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	color:#777;
-	border:1px solid #CCC;
-	border-radius:10px;
-	font-family:arial;
-	text-align:center;
-	background:#EEE;
-}
-.container .front {
-	z-index:999;
-	backface-visibility:hidden;
-}
-.container .back {
-	z-index:888;
-	transform:rotateY(180deg);
-	backface-visibility:hidden;
-}
-.container .front header{
-	box-shadow:0 2px 5px rgba(0,0,0,.2);
-	border-radius:10px 10px 0 0;
-	background:#444;
-	margin-bottom:55px;
-	width:100%;
-	height:80px;
-}
-.container .front header img {
-	box-shadow:0 5px 10px rgba(0,0,0,.5);
-	position:relative;
-	top:25px;
-	height:100px;
-	width:100px;
-	border-radius:50%;
-}
-.container .front h3 {
-	text-shadow:4px 3px 8px #CCC;
-	margin-bottom:10px;
-}
-.container .front p {
-	margin-top:0;
-	margin:0 auto;
-	line-height:1.5;
-}
-.container .front span {
-	text-shadow:0 2px 4px #260060;
-	text-transform:capitalize;
-	display:inline-block;
-	font-weight:bold;
-	margin-top:40px;
-	color:#260060;
-}
+        .container {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+            perspective: 500px;
+            width: 300px; /* Fixed width for now */
+            height: 350px;
+            position: relative;
+            margin: 20px; /* Add margin between cards */
+            transition: all 2s ease-in-out;
+            transform-style: preserve-3d;
+        }
 
-.container .back ul {
-	padding:0;
-	list-style:none;
-	line-height:2;
+        .container > div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #777;
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            font-family: arial;
+            text-align: center;
+            background: #EEE;
+            backface-visibility: hidden; /* Important for the flip effect */
+        }
 
-}
+        .container .front {
+            z-index: 999;
+        }
 
-.container:hover {
-	transform:rotateY(180deg);
-}
+        .container .back {
+            z-index: 888;
+            transform: rotateY(180deg);
+        }
 
+        .container .front header {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+            border-radius: 10px 10px 0 0;
+            background: #444;
+            margin-bottom: 55px;
+            width: 100%;
+            height: 80px;
+        }
+
+        .container .front header img {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+            position: relative;
+            top: 25px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .container .front h3 {
+            text-shadow: 4px 3px 8px #CCC;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .container .front p {
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .container .front span {
+            text-shadow: 0 2px 4px #260060;
+            text-transform: capitalize;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 40px;
+            color: #260060;
+        }
+
+        .container .back ul {
+            padding: 0;
+            list-style: none;
+            line-height: 2;
+        }
+
+        .container .back p {
+            color: black;
+        }
+
+        .container:hover {
+            transform: rotateY(180deg);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .container {
+                width: calc(50% - 40px); /* Two cards on smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: calc(100% - 40px); /* One card per row on very small screens */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-      <div style="color: ghostwhite; font-size: 3dvi; font-family:Arial, Helvetica, sans-serif; text-align: center;">FUTURE ONWARD</div>
+        <div>FUTURE ONWARD</div>
     </header>
-<main>
-		<div class="container" id="firstfront">
-			<div class="front">
-				<header>
-					<img src="./images/softdev.jpg" alt="Software Development">
-				</header>
-				<h3 style="color: black;">Software Development</h3>
-				<p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
-				<span>Details</span>
-			</div>
-			<div class="back">
-				<ul>
-					<li>Documents and Media Archiving for Armed Forces</li>
-					<li>Aviation Inventory Management, Lifecycle Management and Warning System</li>
-					<li>Commercial Credit Scoring Prediction System</li>
-					<li>Logistics Automation System</li>
-				</ul>
-        <p style="color: black;">Contact us if you are interested</p>
-			</div>
-    </div>
-  </main>
-  </body>
+    <main>
+        <div class="container">
+            <div class="front">
+                <header>
+                    <img src="./images/softdev.jpg" alt="Software Development">
+                </header>
+                <h3>Software Development</h3>
+                <p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
+                <span>Details</span>
+            </div>
+            <div class="back">
+                <ul>
+                    <li>Documents and Media Archiving for Armed Forces</li>
+                    <li>Aviation Inventory Management, Lifecycle Management and Warning System</li>
+                    <li>Commercial Credit Scoring Prediction System</li>
+                    <li>Logistics Automation System</li>
+                </ul>
+                <p>Contact us if you are interested</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="front">
+                <header>
+                    <img src="./images/edu.jpg" alt="EdTech">
+                </header>
+                <h3>Another Service</h3>
+                <p>Description of another service provided by Future Onward.</p>
+                <span>Details</span>
+            </div>
+            <div class="back">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <p>Contact us for more information</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="front">
+                <header>
+                    <img src="./images/franchise.jpeg" alt="Franchise">
+                </header>
+                <h3>Third Service</h3>
+                <p>Details about a third service offered by Future Onward.</p>
+                <span>Details</span>
+            </div>
+            <div class="back">
+                <ul>
+                    <li>Feature A</li>
+                    <li>Feature B</li>
+                    <li>Feature C</li>
+                </ul>
+                <p>Reach out to us today!</p>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
