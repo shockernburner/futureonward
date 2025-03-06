@@ -20,7 +20,7 @@ body {
 	width:100%;
 	height:100%;
 	position:relative;
-	margin:100px 0 0 35%;
+	margin:0 0 0 35%;
 	transition:all 2s ease-in-out;
 	transform-style:preserve-3d;
   display: inline-grid;
@@ -38,16 +38,16 @@ body {
 	text-align:center;
 	background:#EEE;
 }
-.container .front {
+.container0 .front{
 	backface-visibility:hidden;
   float: left;
 }
-.container .back {
+.container0 .back{
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
   float: left;
 }
-.container .front header{
+.container0 .frontheader{
 	box-shadow:0 2px 5px rgba(0,0,0,.2);
 	border-radius:10px 10px 0 0;
 	background:#444;
@@ -55,7 +55,7 @@ body {
 	width:100%;
 	height:80px;
 }
-.container .front header img {
+.container0 .frontheader img {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	position:relative;
 	top:25px;
@@ -63,16 +63,16 @@ body {
 	width:100px;
 	border-radius:50%;
 }
-.container .front h3 {
+.container0 .fronth3 {
 	text-shadow:4px 3px 8px #CCC;
 	margin-bottom:10px;
 }
-.container .front p {
+.container0 .frontp {
 	margin-top:0;
 	margin:0 auto;
 	line-height:1.5;
 }
-.container .front span {
+.container0 .frontspan {
 	text-shadow:0 2px 4px #260060;
 	text-transform:capitalize;
 	display:inline-block;
@@ -81,23 +81,23 @@ body {
 	color:#260060;
 }
 
-.container .back ul {
+.container0 .backul {
 	padding:0;
 	list-style:square;
 	line-height:2;
 
 }
 
-.container .front2 {
+.container2 .front2 {
 	backface-visibility:hidden;
   float: left;
 }
-.container .back2 {
+.container2 .back2 {
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
   float: left;
 }
-.container .front2 header{
+.container2 .front2 header{
 	box-shadow:0 2px 5px rgba(0,0,0,.2);
 	border-radius:10px 10px 0 0;
 	background:#444;
@@ -105,7 +105,7 @@ body {
 	width:100%;
 	height:80px;
 }
-.container .front2 header img {
+.container2 .front2 header img {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	position:relative;
 	top:25px;
@@ -113,16 +113,16 @@ body {
 	width:100px;
 	border-radius:50%;
 }
-.container .front2 h3 {
+.container2 .front2 h3 {
 	text-shadow:4px 3px 8px #CCC;
 	margin-bottom:10px;
 }
-.container .front2 p {
+.container2 .front2 p {
 	margin-top:0;
 	margin:0 auto;
 	line-height:1.5;
 }
-.container .front2 span {
+.container2 .front2 span {
 	text-shadow:0 2px 4px #260060;
 	text-transform:capitalize;
 	display:inline-block;
@@ -131,23 +131,23 @@ body {
 	color:#260060;
 }
 
-.container .back2 ul {
+.container2 .back2 ul {
 	padding:0;
 	list-style:square;
 	line-height:2;
 
 }
 
-.container .front3 {
+.container3 .front3 {
 	backface-visibility:hidden;
   float: left;
 }
-.container .back3 {
+.container3 .back3 {
 	transform:rotateY(180deg);
 	backface-visibility:hidden;
   float: left;
 }
-.container .front3 header{
+.container3 .front3 header{
 	box-shadow:0 2px 5px rgba(0,0,0,.2);
 	border-radius:10px 10px 0 0;
 	background:#444;
@@ -155,7 +155,7 @@ body {
 	width:100%;
 	height:80px;
 }
-.container .front3 header img {
+.container3 .front3 header img {
 	box-shadow:0 5px 10px rgba(0,0,0,.5);
 	position:relative;
 	top:25px;
@@ -163,16 +163,16 @@ body {
 	width:100px;
 	border-radius:50%;
 }
-.container .front3 h3 {
+.container3 .front3 h3 {
 	text-shadow:4px 3px 8px #CCC;
 	margin-bottom:10px;
 }
-.container .front3 p {
+.container3 .front3 p {
 	margin-top:0;
 	margin:0 auto;
 	line-height:1.5;
 }
-.container .front3 span {
+.container3 .front3 span {
 	text-shadow:0 2px 4px #260060;
 	text-transform:capitalize;
 	display:inline-block;
@@ -181,20 +181,20 @@ body {
 	color:#260060;
 }
 
-.container .back3 ul {
+.container3 .back3 ul {
 	padding:0;
 	list-style:square;
 	line-height:2;
 
 }
 
-.container .front:hover {
+.container0:hover {
 	transform:rotateY(180deg);
 }
-.container .front2:hover {
+.container2:hover {
 	transform:rotateY(180deg);
 }
-.container .front3:hover {
+.container3:hover {
 	transform:rotateY(180deg);
 }
     </style>
@@ -206,7 +206,7 @@ body {
 <main>
   <body>
 		<div class="container">
-      <div class="container">
+      <div class="container0">
 			<div class="front">
 				<header>
 					<img src="./images/softdev.jpg" alt="Software Development">
@@ -225,7 +225,7 @@ body {
         <p style="color: black;">Contact us if you are interested</p>
 			</div>
       </div>
-      <div class="container">
+      <div class="container2">
       <div class="front2">
 				<header>
 					<img src="./images/edu.jpg" alt="EdTech">
@@ -241,7 +241,7 @@ body {
         <p style="color: black;">Contact us if you are interested in either learning, or earning</p>
 			</div>
     </div>
-    <div class="container">
+    <div class="container3">
       <div class="front3">
 				<header>
 					<img src="./images/franchise.jpeg" alt="Franchise">
