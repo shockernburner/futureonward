@@ -4,194 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Onward</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            perspective: 1000px;
-            background: url('./images/home2.jpg') center;
-            backdrop-filter: blur(5px);
-            background-size: cover;
-            margin: 0; /* Remove default body margin */
-        }
-
-        header {
-            text-align: center;
-            color: ghostwhite;
-            font-size: 3dvi;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 20px 0; /* Add some padding to the header */
-        }
-
-        main {
-            display: flex; /* Use flexbox for side-by-side layout */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            justify-content: center; /* Center the cards horizontally */
-            padding: 20px; /* Add padding around the cards */
-        }
-
-        .container {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
-            perspective: 500px;
-            width: 300px; /* Fixed width for now */
-            height: 350px;
-            position: relative;
-            margin: 20px; /* Add margin between cards */
-            transition: all 2s ease-in-out;
-            transform-style: preserve-3d;
-        }
-
-        .container > div {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            color: #777;
-            border: 1px solid #CCC;
-            border-radius: 10px;
-            font-family: arial;
-            text-align: center;
-            background: #EEE;
-            backface-visibility: hidden; /* Important for the flip effect */
-        }
-
-        .container .front {
-            z-index: 999;
-        }
-
-        .container .back {
-            z-index: 888;
-            transform: rotateY(180deg);
-        }
-
-        .container .front header {
-            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-            border-radius: 10px 10px 0 0;
-            background: #444;
-            margin-bottom: 55px;
-            width: 100%;
-            height: 80px;
-        }
-
-        .container .front header img {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
-            position: relative;
-            top: 20px;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-        }
-
-        .container .front h3 {
-            text-shadow: 4px 3px 8px #CCC;
-            margin-bottom: 10px;
-            color: black;
-        }
-
-        .container .front p {
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        .container .front span {
-            text-shadow: 0 2px 4px #260060;
-            text-transform: capitalize;
-            display: inline-block;
-            font-weight: bold;
-            margin-top: 20px;
-            color: #260060;
-        }
-
-        .container .back ul {
-            padding: 0;
-            list-style: none;
-            line-height: 2;
-        }
-
-        .container .back p {
-            color: black;
-        }
-
-        .container:hover {
-            transform: rotateY(180deg);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 900px) {
-            .container {
-                width: calc(50% - 40px); /* Two cards on smaller screens */
-            }
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                width: calc(100% - 40px); /* One card per row on very small screens */
-            }
-        }
-        footer {
-        background: linear-gradient(transparent 10%, black);
-        background-size: cover;
-        color: white;
-        position: sticky;
-        bottom: 0;
-        width: 100%;
-        overflow: hidden;
-        font-size: medium;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .footer-content {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px;
-        backdrop-filter: blur(10px);
-      }
-
-      /* Map Container */
-      .map-container {
-        width: 40%; /* Adjust as needed */
-        height: 200px; /* Adjust as needed */
-      }
-
-      /* Contact Info & WhatsApp */
-      .contact-info {
-        text-align: center;
-      }
-
-      /* Copyright */
-      .copyright {
-        text-align: center;
-        font-size: 0.8em;
-        padding-top: 10px; 
-        backdrop-filter: blur(5px);
-      }
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -266,13 +80,14 @@ a:active {
         </div>
   
         <div class="contact-info">
-          <h3>Contact Us</h3>
-          <p>Future Onward OPC</p>
+          <h3 style="text-decoration: underline;">Contact Us</h3>
+          <p style="text-shadow: 1rem;">Future Onward OPC</p>
+          <a href="tel:+8801746653647"><i class="fas fa-phone"></i> Click for a call, or </a>
+          <a href="https://wa.me/+8613949048330?text=I'm%20interested%20for%20a%20call" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp us, or, </a> 
+          <a href="mailto:director@futureonward.com"><i class="fas fa-envelope"></i>Send Email for an intro, we surely will catch up</a>
+          <p>Always welcome for a coffee at:</p>
           <p>House # 526 (5th Floor), Abdur Sadique Road, Block # F</p>
           <p>Bashundhara R/A, Dhaka 1229, Bangladesh</p>
-          <a href="tel:+8801746653647">Give us a call, or, </a>
-          <a href="https://wa.me/+8613949048330?text=I'm%20interested%20for%20a%20call" target="_blank">WhatsApp us, or, </a> 
-          <a href="mailto:director@futureonward.com">Send Email for an intro, we surely will catch up</a>
         </div>
   
       </div>
