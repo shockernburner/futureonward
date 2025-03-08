@@ -116,18 +116,18 @@ main {
     .container {
         width: calc(50% - 40px); /* Two cards on smaller screens */
     }
-    .footer-content i {
-        text-size-adjust: 0.6;
+    .fa-5x {
+        font-size: 10vw;
     }
 }
 
 @media (max-width: 600px) {
     .container {
         width: calc(100% - 40px); /* One card per row on very small screens */
-    } 
-    .footer-content i {
-        text-size-adjust: 0.3;
     }
+    .fa-5x {
+        font-size: 10vw;
+    } 
 }
 footer {
 background: linear-gradient(transparent 10%, black);
