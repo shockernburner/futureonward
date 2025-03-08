@@ -2,7 +2,6 @@ const cacheName = 'my-site-cache-v1';
 const assetsToCache = [
   '/',
   '/index.html',
-  '/assets/location.html',
   '/css/style.css',
   '/icons/manifest-icon-001.png',
   '/images/edu.jpg',
