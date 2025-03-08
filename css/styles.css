@@ -116,18 +116,18 @@ main {
     .container {
         width: calc(50% - 40px); /* Two cards on smaller screens */
     }
-    .contact-info .fa-5x {
-        data-fa-transform: shrink-48;
-    }
+    .contact-info i {
+        font-size: 3em;
+      }
 }
 
 @media (max-width: 600px) {
     .container {
         width: calc(100% - 40px); /* One card per row on very small screens */
     }
-    .contact-info .fa-5x {
-        data-fa-transform: shrink-16;
-    }
+    .contact-info i {
+        font-size: 1em;
+      }
 }
 footer {
 background: linear-gradient(transparent 10%, black);
@@ -157,8 +157,6 @@ height: 200px; /* Adjust as needed */
 
 /* Contact Info & WhatsApp */
 .contact-info {
-    border: 2px solid #ccc; /* Light gray border */
-    border-radius: 15px; /* Rounded corners */
     margin: 10px; /* Spacing between icons */ 
     text-align: center;
 }
