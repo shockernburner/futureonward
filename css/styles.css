@@ -116,9 +116,8 @@ main {
     .container {
         width: calc(50% - 40px); /* Two cards on smaller screens */
     }
-    .fa-5x {
-        font-size: 10vw;
-        text-size-adjust: 0.6;
+    .contact-info .fa-5x {
+        data-fa-transform: shrink-48;
     }
 }
 
@@ -126,10 +125,9 @@ main {
     .container {
         width: calc(100% - 40px); /* One card per row on very small screens */
     }
-    .fa-5x {
-        font-size: 10vw;
-        text-size-adjust: 0.3;
-    } 
+    .contact-info .fa-5x {
+        data-fa-transform: shrink-16;
+    }
 }
 footer {
 background: linear-gradient(transparent 10%, black);
@@ -189,11 +187,6 @@ a:hover {
 color: red;
 background-color: transparent;
 text-decoration:dashed;
-}
-
-a:hover i {
-    --fa-border-color: black;
-    --fa-box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
 a:active {
