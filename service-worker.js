@@ -21,9 +21,17 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});
+    event.respondWith(
+      caches.match(event.request).then(response => {
+        if (response) {
+          // Check if it's a redirect response
+          if (response.status >= 300 && response.status < 400) {
+            // If it's a redirect, simply fetch from network.
+            return fetch(event.request);
+          }
+          return response; // Serve from cache if not a redirect
+        }
+        return fetch(event.request); // Fetch from network if not in cache
+      })
+    );
+  });
