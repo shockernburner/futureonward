@@ -118,6 +118,7 @@ main {
     }
     .fa-5x {
         font-size: 10vw;
+        text-size-adjust: 0.6;
     }
 }
 
@@ -127,6 +128,7 @@ main {
     }
     .fa-5x {
         font-size: 10vw;
+        text-size-adjust: 0.3;
     } 
 }
 footer {
