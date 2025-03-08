@@ -151,7 +151,10 @@ height: 200px; /* Adjust as needed */
 
 /* Contact Info & WhatsApp */
 .contact-info {
-text-align: center;
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 15px; /* Rounded corners */
+    margin: 10px; /* Spacing between icons */ 
+    text-align: center;
 }
 
 /* Copyright */
@@ -161,6 +164,7 @@ font-size: 0.8em;
 padding-top: 10px; 
 backdrop-filter: blur(5px);
 }
+
 a:link {
 color: white;
 background-color: transparent;
@@ -177,6 +181,8 @@ a:hover {
 color: red;
 background-color: transparent;
 text-decoration:dashed;
+border-color: black;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
 a:active {
