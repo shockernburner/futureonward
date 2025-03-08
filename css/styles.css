@@ -181,8 +181,8 @@ a:hover {
 color: red;
 background-color: transparent;
 text-decoration:dashed;
-border-color: black;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+--fa-border-color: black;
+--fa-box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
 a:active {
