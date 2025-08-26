@@ -1,85 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Onward</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="manifest" href="/manifest.json">
-    <script src="./js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Future Onward</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: PWA manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Vertical tab layout styles (from example.html) */
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+    .tab-item {
+      flex-grow: 1;
+      min-width: 6rem;
+      max-width: 40%;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+    .tab-item.active {
+      flex-grow: 5;
+      min-width: 60%;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <div>FUTURE ONWARD</div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="front">
-                <header>
-                    <img src="./images/softdev.jpg" alt="Software Development">
-                </header>
-                <h3>Software Development</h3>
-                <p>Developing innovative, indigenous software solutions for diverse market needs, including Fintech, CMS, and data management</p>
-                <span>Hover for Details</span>
-            </div>
-            <div class="back">
-                <ul>
-                    <li>Documents and Media Archiving for Armed Forces</li>
-                    <li>Aviation Inventory Management, Lifecycle Management and Warning System</li>
-                    <li>Commercial Credit Scoring Prediction System</li>
-                    <li>Logistics Automation System</li>
-                </ul>
-                <p>Contact us if you are interested</p>
-            </div>
-        </div>
-        <div class="container">
-            <div class="front">
-                <header>
-                    <img src="./images/edu.jpg" alt="EdTech">
-                </header>
-                <h3>Education Technology</h3>
-                <p>We partner with leading companies to offer targeted online training programs</p>
-                <span>Hover for Details</span>
-            </div>
-            <div class="back">
-                <ul>
-                    <li>Eduskiller bridges the gap between industry and education, empowering students with in-demand skills. Complete courses at your own pace, and gain access to live video interviews and direct recruitment opportunities with our industry partners.</li>
-                </ul>
-                <p>Whether you want to learn, or earn, contact us!</p>
-            </div>
-        </div>
-        <div class="container">
-            <div class="front">
-                <header>
-                    <img src="./images/bishojo.JPG" alt="Bishojo">
-                </header>
-                <h3>BISHOJO</h3>
-                <p>Bishojo Sushi —where tradition meets innovation, and every dish tells a story</p>
-                <span>Hover for Details</span>
-            </div>
-            <div class="back">
-                <ul>
-                    <li>View our catalogue <a href="https://wa.me/c/8801721779304" target="_blank"><i class="fab fa-whatsapp fa-2x fa-border" style="color: black;"></i></a></li>
-                </ul>
-                <p>or visit <a href="https://bishojo.store" style="color: black;"> our site</a></p>
-            </div>
-        </div>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <h3 style="text-decoration: underline;">Contact Us</h3>
-          <a href="tel:+8801746653647"><i style="--fa-border: 20px; --fa-border-color: gray; --fa-border-radius: 15px; --fa-margin: 10px;" class="fas fa-phone fa-5x fa-border"></i></a>
-          <a href="https://wa.me/+8613949048330?text=I'm%20interested%20for%20a%20call" target="_blank"><i style="--fa-border: 20px; --fa-border-color: gray; --fa-border-radius: 15px; --fa-margin: 10px;" class="fab fa-whatsapp fa-5x fa-border"></i></a>
-          <a href="mailto:director@futureonward.com"><i style="--fa-border: 20px; --fa-border-color: gray; --fa-border-radius: 15px; --fa-margin: 10px;" class="fas fa-envelope fa-5x fa-border"></i></a>
-          <a href="./assets/location.html" target="_blank"><i style="--fa-border: 20px; --fa-border-color: gray; --fa-border-radius: 15px; --fa-margin: 10px;" class="fas fa-map-marker-alt fa-5x fa-border"></i></a>
-        </div>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header & Tagline -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <h1 class="text-2xl md:text-3xl font-bold">Future Onward: Innovating Solutions for a Sustainable Tomorrow</h1>
+      <p class="text-gray-600 mt-2">Empowering Progress Across Software, Energy, and Digital Landscapes.</p>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 pt-10 pb-8">
+      <div class="bg-white rounded-xl shadow p-6 md:p-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Driving the Future with Technology and Expertise.</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Future Onward is a dynamic technology company committed to delivering cutting-edge solutions across key growth sectors. Through strategic partnerships and a deep understanding of market needs, we empower businesses and individuals with innovative software, sustainable energy systems, robust digital infrastructure, and comprehensive medical tourism services.
+        </p>
       </div>
-      <div class="copyright">
-        &copy; 2024 Future Onward OPC. All rights reserved.
+    </section>
+
+    <!-- Our Scope -->
+    <section class="max-w-7xl mx-auto px-4 pb-10">
+      <h3 class="text-lg md:text-xl font-semibold mb-4">Our Scope</h3>
+      <p class="text-gray-700 mb-6">
+        Future Onward specializes in a diverse portfolio of services, categorized into four core pillars: Software, Energy, Digital, and Medical Tourism.
+      </p>
+
+      <!-- Vertical Tabs Container (from example.html) -->
+      <div class="flex flex-col md:flex-row w-full h-[80vh] bg-white rounded-xl shadow-2xl overflow-hidden">
+
+        <!-- Tab: Software -->
+        <div id="tab-software" class="tab-item active bg-indigo-500 hover:bg-indigo-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+          <div class="flex flex-col h-full">
+            <h2 class="vertical-text text-3xl font-bold mb-4">Software</h2>
+            <div class="tab-content mt-auto opacity-100 transition-opacity duration-500">
+              <p class="text-base leading-relaxed mb-3">
+                We develop bespoke software applications to streamline operations, enhance efficiency, and provide actionable insights. Our key offerings include:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
+                <li><strong>Customized ERP:</strong> Flexible ERP with drag-and-drop functionality and a powerful dashboard creator leveraging LLMs for user-prompted customization.</li>
+                <li><strong>EV Charging Station ERP &amp; Mobile Apps:</strong> Planning, operation, and maintenance management for EV charging infrastructure.</li>
+                <li><strong>Content Management System (CMS):</strong> Archiving, indexing, and search across large document and media collections.</li>
+                <li><strong>Commercial Credit Scoring Prediction System:</strong> Data-driven models for accurate credit risk assessment.</li>
+                <li><strong>Document &amp; Media Archive, Index, and Search:</strong> Efficient storage, organization, and retrieval at scale.</li>
+                <li><strong>Inventory Management System:</strong> Real-time tracking and control across industries.</li>
+                <li><strong>EdTech Platform:</strong> Self-paced learning with engaging, personalized content.</li>
+                <li><strong>Flying Mission Planner &amp; Map Creation Tools:</strong> Software for drone/aerial operations enabling precise mission planning and detailed map generation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Energy -->
+        <div id="tab-energy" class="tab-item bg-purple-500 hover:bg-purple-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+          <div class="flex flex-col h-full">
+            <h2 class="vertical-text text-3xl font-bold mb-4">Energy</h2>
+            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+              <p class="text-base leading-relaxed mb-3">
+                Energy Sector (Powered by Huawei). We are at the forefront of the renewable energy revolution in Bangladesh:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
+                <li><strong>Complete Solar Power System Consultancy &amp; Implementation:</strong> End-to-end solar solutions with a strong focus on Energy Storage Systems (ESS).</li>
+                <li><strong>Net Metering Solutions:</strong> Advanced net metering leveraging Huawei’s state-of-the-art technology.</li>
+                <li><strong>EV Charging Station Planning &amp; Construction:</strong> From site assessment to full-scale buildout.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Digital -->
+        <div id="tab-digital" class="tab-item bg-emerald-500 hover:bg-emerald-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+          <div class="flex flex-col h-full">
+            <h2 class="vertical-text text-3xl font-bold mb-4">Digital</h2>
+            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+              <p class="text-base leading-relaxed mb-3">
+                Digital Services (Powered by Huawei). We deliver critical digital infrastructure:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
+                <li><strong>Datacenter &amp; Cloud Solutions:</strong> Consultancy and implementation for scalable, secure foundations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Medical Tourism -->
+        <div id="tab-medical" class="tab-item bg-sky-500 hover:bg-sky-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+          <div class="flex flex-col h-full">
+            <h2 class="vertical-text text-3xl font-bold mb-4">Medical</h2>
+            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+              <p class="text-base leading-relaxed mb-3">
+                Medical Tourism (ubermed.life). We guide patients from Bangladesh to world-class medical facilities with end-to-end support:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
+                <li><strong>Online Consultancy &amp; Checkups:</strong> Initial virtual consultations.</li>
+                <li><strong>Diagnosis &amp; In-Depth Checks:</strong> Facilitation of detailed examinations and accurate diagnoses.</li>
+                <li><strong>Surgical Coordination:</strong> Arranging and managing procedures with top hospitals.</li>
+                <li><strong>Patient Logistics:</strong> Visa assistance, accommodation, appointments, and interpreter services, with a primary focus on China.</li>
+              </ul>
+              <p class="mt-4 text-sm md:text-base">
+                Learn more: <a class="underline font-medium text-white hover:text-gray-100" href="https://ubermed.life" target="_blank" rel="noopener">ubermed.life</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </footer>
-  
+    </section>
+
+    <!-- Retail Food Chain - BISHOJO -->
+    <section class="max-w-7xl mx-auto px-4 pb-14">
+      <div class="bg-white rounded-xl shadow p-6 md:p-8">
+        <h3 class="text-lg md:text-xl font-semibold mb-2">Retail Food Chain</h3>
+        <p class="text-gray-700 mb-4">
+          Bishojo Sushi — where tradition meets innovation, and every dish tells a story.
+        </p>
+        <a href="https://bishojo.store" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-800">
+          Visit bishojo.store
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-600">
+      &copy; 2024 Future Onward OPC. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-item');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const isActive = tab.classList.contains('active');
+          if (!isActive) {
+            tabs.forEach(t => {
+              t.classList.remove('active');
+              const content = t.querySelector('.tab-content');
+              if (content) {
+                content.classList.remove('opacity-100');
+                content.classList.add('opacity-0');
+              }
+            });
+            tab.classList.add('active');
+            const activeContent = tab.querySelector('.tab-content');
+            if (activeContent) {
+              activeContent.classList.remove('opacity-0');
+              activeContent.classList.add('opacity-100');
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
