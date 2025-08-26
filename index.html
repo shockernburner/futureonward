@@ -38,6 +38,9 @@
       backdrop-filter: saturate(120%);
     }
     .tab-item.active { flex: 5 1 0%; min-width: 40%; }
+  /* Hide non-active tab contents */
+  .tab-content { display: none; }
+  .tab-item.active .tab-content { display: block; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col text-white">
@@ -66,9 +69,9 @@
     </section>
 
     <!-- Our Scope -->
-    <section class="max-w-7xl mx-auto px-4 pb-10">
-      <h3 class="text-lg md:text-xl font-semibold mb-4 drop-shadow">Our Scope</h3>
-      <p class="mb-6 opacity-95">
+  <section class="max-w-7xl mx-auto px-4 pb-10 flex flex-col items-center">
+      <h3 class="text-lg md:text-xl font-semibold mb-4 drop-shadow text-center">Our Scope</h3>
+      <p class="mb-6 opacity-95 text-center">
         Future Onward specializes in a diverse portfolio of services, categorized into five core pillars: Software, Energy, Digital, Medical Tourism, and Retail Food (Bishojo).
       </p>
 
@@ -172,7 +175,7 @@
   </main>
 
   <footer class="bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 py-6 text-sm opacity-80">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-sm opacity-80 text-center">
       &copy; 2024 Future Onward OPC. All rights reserved.
     </div>
   </footer>
