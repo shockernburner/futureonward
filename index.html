@@ -19,40 +19,51 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
 
-    /* Vertical tab layout styles (from example.html) */
-    .vertical-text {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+    /* Background layers */
+    .bg-image {
+      background-image: url('images/home2.jpg'); /* using home2.jpg available in images */
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      transform: scale(1.05);
     }
+    .bg-dim {
+      background: radial-gradient(1200px 1200px at 30% 10%, rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
+                  linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+    }
+
+    /* Vertical tab layout styles */
+    .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
     .tab-item {
-      flex-grow: 1;
-      min-width: 6rem;
-      max-width: 40%;
+      flex: 1 1 0%; /* distribute width evenly */
+      min-width: 2.5rem; /* ensure 5 tabs remain visible on small screens */
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       overflow: hidden;
+      backdrop-filter: saturate(120%);
     }
-    .tab-item.active {
-      flex-grow: 5;
-      min-width: 60%;
-    }
+    .tab-item.active { flex: 5 1 0%; min-width: 40%; }
   </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col text-white">
+
+  <!-- Blurred image background and dim overlay -->
+  <div class="fixed inset-0 -z-20 bg-image"></div>
+  <div class="fixed inset-0 -z-10 bg-dim"></div>
 
   <!-- Header & Tagline -->
-  <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 py-8">
-      <h1 class="text-2xl md:text-3xl font-bold">Future Onward: Innovating Solutions for a Sustainable Tomorrow</h1>
-      <p class="text-gray-600 mt-2">Empowering Progress Across Software, Energy, and Digital Landscapes.</p>
+  <header class="bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+      <h1 class="text-2xl md:text-3xl font-bold drop-shadow">Future Onward: Innovating Solutions for a Sustainable Tomorrow</h1>
+      <p class="mt-2 opacity-90">Empowering Progress Across Software, Energy, and Digital Landscapes.</p>
     </div>
   </header>
 
   <main class="flex-1">
     <!-- Hero Section -->
     <section class="max-w-7xl mx-auto px-4 pt-10 pb-8">
-      <div class="bg-white rounded-xl shadow p-6 md:p-8">
-        <h2 class="text-xl md:text-2xl font-semibold mb-4">Driving the Future with Technology and Expertise.</h2>
-        <p class="text-gray-700 leading-relaxed">
+      <div class="rounded-xl p-6 md:p-8 text-center">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4 drop-shadow">Driving the Future with Technology and Expertise.</h2>
+        <p class="leading-relaxed opacity-95">
           Future Onward is a dynamic technology company committed to delivering cutting-edge solutions across key growth sectors. Through strategic partnerships and a deep understanding of market needs, we empower businesses and individuals with innovative software, sustainable energy systems, robust digital infrastructure, and comprehensive medical tourism services.
         </p>
       </div>
@@ -60,20 +71,20 @@
 
     <!-- Our Scope -->
     <section class="max-w-7xl mx-auto px-4 pb-10">
-      <h3 class="text-lg md:text-xl font-semibold mb-4">Our Scope</h3>
-      <p class="text-gray-700 mb-6">
-        Future Onward specializes in a diverse portfolio of services, categorized into four core pillars: Software, Energy, Digital, and Medical Tourism.
+      <h3 class="text-lg md:text-xl font-semibold mb-4 drop-shadow">Our Scope</h3>
+      <p class="mb-6 opacity-95">
+        Future Onward specializes in a diverse portfolio of services, categorized into five core pillars: Software, Energy, Digital, Medical Tourism, and Retail Food (Bishojo).
       </p>
 
-      <!-- Vertical Tabs Container (from example.html) -->
-      <div class="flex flex-col md:flex-row w-full h-[80vh] bg-white rounded-xl shadow-2xl overflow-hidden">
+      <!-- Vertical Tabs Container -->
+  <div class="flex flex-row w-full h-[80vh] rounded-xl overflow-hidden">
 
         <!-- Tab: Software -->
-        <div id="tab-software" class="tab-item active bg-indigo-500 hover:bg-indigo-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+  <div id="tab-software" class="tab-item active bg-indigo-600/60 hover:bg-indigo-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Software</h2>
             <div class="tab-content mt-auto opacity-100 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3">
+      <p class="text-base leading-relaxed mb-3 opacity-95">
                 We develop bespoke software applications to streamline operations, enhance efficiency, and provide actionable insights. Our key offerings include:
               </p>
               <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
@@ -91,11 +102,11 @@
         </div>
 
         <!-- Tab: Energy -->
-        <div id="tab-energy" class="tab-item bg-purple-500 hover:bg-purple-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+  <div id="tab-energy" class="tab-item bg-purple-600/60 hover:bg-purple-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Energy</h2>
             <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3">
+      <p class="text-base leading-relaxed mb-3 opacity-95">
                 Energy Sector (Powered by Huawei). We are at the forefront of the renewable energy revolution in Bangladesh:
               </p>
               <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
@@ -108,11 +119,11 @@
         </div>
 
         <!-- Tab: Digital -->
-        <div id="tab-digital" class="tab-item bg-emerald-500 hover:bg-emerald-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+  <div id="tab-digital" class="tab-item bg-emerald-600/60 hover:bg-emerald-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Digital</h2>
             <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3">
+      <p class="text-base leading-relaxed mb-3 opacity-95">
                 Digital Services (Powered by Huawei). We deliver critical digital infrastructure:
               </p>
               <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
@@ -123,11 +134,11 @@
         </div>
 
         <!-- Tab: Medical Tourism -->
-        <div id="tab-medical" class="tab-item bg-sky-500 hover:bg-sky-600 cursor-pointer flex-shrink-0 flex flex-col justify-between p-6 text-white transform-gpu">
+  <div id="tab-medical" class="tab-item bg-sky-600/60 hover:bg-sky-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Medical</h2>
             <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3">
+              <p class="text-base leading-relaxed mb-3 opacity-95">
                 Medical Tourism (ubermed.life). We guide patients from Bangladesh to world-class medical facilities with end-to-end support:
               </p>
               <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
@@ -143,25 +154,29 @@
           </div>
         </div>
 
+        <!-- Tab: Bishojo -->
+  <div id="tab-bishojo" class="tab-item bg-rose-600/60 hover:bg-rose-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
+          <div class="flex flex-col h-full">
+            <h2 class="vertical-text text-3xl font-bold mb-4">Bishojo</h2>
+            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+              <p class="text-base leading-relaxed mb-3 opacity-95">
+                Bishojo Sushi — where tradition meets innovation, and every dish tells a story.
+              </p>
+              <a href="https://bishojo.store" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 transition">
+                Visit bishojo.store
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Retail Food Chain - BISHOJO -->
-    <section class="max-w-7xl mx-auto px-4 pb-14">
-      <div class="bg-white rounded-xl shadow p-6 md:p-8">
-        <h3 class="text-lg md:text-xl font-semibold mb-2">Retail Food Chain</h3>
-        <p class="text-gray-700 mb-4">
-          Bishojo Sushi — where tradition meets innovation, and every dish tells a story.
-        </p>
-        <a href="https://bishojo.store" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-black text-white hover:bg-gray-800">
-          Visit bishojo.store
-        </a>
-      </div>
-    </section>
+  <!-- Retail Food Chain section removed; moved into Bishojo tab -->
   </main>
 
-  <footer class="bg-white border-t">
-    <div class="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-600">
+  <footer class="bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-sm opacity-80">
       &copy; 2024 Future Onward OPC. All rights reserved.
     </div>
   </footer>
@@ -192,5 +207,28 @@
       });
     });
   </script>
+
+  <!-- Floating contact buttons -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-3">
+    <!-- Call -->
+    <a href="tel:+8801746653647" aria-label="Call +8801746653647" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="Call">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.6 2.5a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.57-1.57a2 2 0 0 1 2.11-.45c.8.28 1.64.48 2.5.6A2 2 0 0 1 22 16.92z" />
+      </svg>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/8613949048330" target="_blank" rel="noopener" aria-label="WhatsApp +8613949048330" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-6 h-6" fill="white">
+        <path d="M128 24a104 104 0 0 0-89.6 156.6L32 232l51.9-13.6A104 104 0 1 0 128 24zm0 16a88 88 0 1 1 0 176 87.2 87.2 0 0 1-45.1-12.5l-3.2-1.9-31.7 8.3 8.5-30.6-2-3.3A88 88 0 0 1 128 40zm45.7 98.4c-2.6-1.3-15.3-7.6-17.6-8.4s-4.1-1.3-5.8 1.3-6.7 8.4-8.2 10.1-3 1.9-5.6.6-10.9-4-20.8-12.7c-7.7-6.9-12.9-15.4-14.4-18s-.1-3.9 1.1-5.2c1.2-1.3 2.6-3.3 3.8-5s1.6-3.3 2.4-5.6.4-4.1-.2-5.6-5.8-14-8-19.2c-2.1-5.1-4.2-4.4-5.8-4.5l-5-.1a9.6 9.6 0 0 0-7 3.2c-2.4 2.6-9.2 9-9.2 22s9.4 25.5 10.7 27.3c1.3 1.7 18.4 28.1 44.6 39.4s26.7 7.1 31.5 6.7c4.8-.4 15.3-6.2 17.5-12.1 2.2-6 2.2-11.2 1.5-12.3-.6-1.1-2.4-1.8-5-3.1z"/>
+      </svg>
+    </a>
+    <!-- Email -->
+    <a href="mailto:director@futureonward.com" aria-label="Email director@futureonward.com" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <path d="M4 8l8 5 8-5" />
+        <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+      </svg>
+    </a>
+  </div>
 </body>
 </html>
