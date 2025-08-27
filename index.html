@@ -37,10 +37,30 @@
       overflow: hidden;
       backdrop-filter: saturate(120%);
     }
-    .tab-item.active { flex: 5 1 0%; min-width: 40%; }
+  .tab-item.active { flex: 5 1 0%; min-width: 40%; }
+  /* Ensure inner flex can shrink so content scrolls */
+  .tab-item > .flex { min-height: 0; }
   /* Hide non-active tab contents */
   .tab-content { display: none; }
-  .tab-item.active .tab-content { display: block; }
+    .tab-item.active .tab-content { display: block; }
+    /* Make active tab content scrollable on small screens */
+  .tab-item .tab-content { overflow-y: auto; -webkit-overflow-scrolling: touch; box-sizing: border-box; flex: 1 1 auto; min-height: 0; max-height: none; padding-right: .5rem; padding-left: .25rem; }
+  .tab-item .tab-content p, .tab-item .tab-content li { overflow-wrap: anywhere; word-break: break-word; }
+  /* Subtle scrollbar styling (scoped to tab content) */
+  .tab-item .tab-content { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.3) transparent; }
+  .tab-item .tab-content::-webkit-scrollbar { width: 8px; }
+  .tab-item .tab-content::-webkit-scrollbar-track { background: transparent; }
+  .tab-item .tab-content::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,.3); border-radius: 8px; }
+  .tab-item .tab-content::-webkit-scrollbar-thumb:hover { background-color: rgba(255,255,255,.45); }
+    /* Small screens: narrower tabs and smaller vertical labels */
+    @media (max-width: 480px) {
+      .tab-item { min-width: 2rem; }
+      .vertical-text { font-size: 1rem; }
+    }
+    /* Small screens: extra bottom padding to avoid overlap with floating buttons */
+    @media (max-width: 640px) {
+  .tab-item .tab-content { padding-bottom: 4.5rem; }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col text-white">
@@ -82,7 +102,7 @@
   <div id="tab-software" class="tab-item active bg-indigo-600/60 hover:bg-indigo-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Software</h2>
-            <div class="tab-content mt-auto opacity-100 transition-opacity duration-500">
+            <div class="tab-content opacity-100 transition-opacity duration-500">
       <p class="text-base leading-relaxed mb-3 opacity-95">
                 We develop bespoke software applications to streamline operations, enhance efficiency, and provide actionable insights. Our key offerings include:
               </p>
@@ -104,7 +124,7 @@
   <div id="tab-energy" class="tab-item bg-purple-600/60 hover:bg-purple-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Energy</h2>
-            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+            <div class="tab-content opacity-0 transition-opacity duration-500">
       <p class="text-base leading-relaxed mb-3 opacity-95">
                 Energy Sector (Powered by Huawei). We are at the forefront of the renewable energy revolution in Bangladesh:
               </p>
@@ -121,7 +141,7 @@
   <div id="tab-digital" class="tab-item bg-emerald-600/60 hover:bg-emerald-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Digital</h2>
-            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+            <div class="tab-content opacity-0 transition-opacity duration-500">
       <p class="text-base leading-relaxed mb-3 opacity-95">
                 Digital Services (Powered by Huawei). We deliver critical digital infrastructure:
               </p>
@@ -136,7 +156,7 @@
   <div id="tab-medical" class="tab-item bg-sky-600/60 hover:bg-sky-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Medical</h2>
-            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+            <div class="tab-content opacity-0 transition-opacity duration-500">
               <p class="text-base leading-relaxed mb-3 opacity-95">
                 Medical Tourism (ubermed.life). We guide patients from Bangladesh to world-class medical facilities with end-to-end support:
               </p>
@@ -157,13 +177,13 @@
   <div id="tab-bishojo" class="tab-item bg-rose-600/60 hover:bg-rose-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
           <div class="flex flex-col h-full">
             <h2 class="vertical-text text-3xl font-bold mb-4">Bishojo</h2>
-            <div class="tab-content mt-auto opacity-0 transition-opacity duration-500">
+            <div class="tab-content opacity-0 transition-opacity duration-500">
               <p class="text-base leading-relaxed mb-3 opacity-95">
                 Bishojo Sushi — where tradition meets innovation, and every dish tells a story.
               </p>
-              <a href="https://bishojo.store" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 transition">
-                Visit bishojo.store
-              </a>
+              <p class="mt-4 text-sm md:text-base">
+                Visit: <a class="underline font-medium text-white hover:text-gray-100" href="https://bishojo.store" target="_blank" rel="noopener">bishojo.store</a>
+              </p>
             </div>
           </div>
         </div>
