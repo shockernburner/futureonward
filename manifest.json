@@ -1,15 +1,12 @@
 {
-    "short_name": "FutreOnward",
-    "name": "Future Onward Ltd",
-    "icons": [
-      {
-        "src": "/icons/manifest-icon-001.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      }
-    ],
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#00ffffff",
-    "theme_color": "#000000"
-  }
+  "name": "Future Onward OPC",
+  "short_name": "Future Onward",
+  "description": "Solar EPC, battery storage, electric mobility and AI security for Bangladesh.",
+  "icons": [
+    { "src": "/icons/manifest-icon-001.png", "sizes": "192x192", "type": "image/png" }
+  ],
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#06101f",
+  "theme_color": "#06101f"
+}

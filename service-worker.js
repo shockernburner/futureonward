@@ -1,36 +1,12 @@
-const cacheName = 'my-site-cache-v1';
-const assetsToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/icons/manifest-icon-001.png',
-  '/images/edu.jpg',
-  '/images/franchise.jpeg',
-  '/images/home2.jpg',
-  '/images/softdev.jpg',
-  '/images/contact.jpg'
-];
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll(assetsToCache);
-    })
-  );
+// The site no longer uses a service worker. This replacement clears the
+// caches left by the old one (which served stale pages) and unregisters itself.
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+    await self.registration.unregister();
+    const clients = await self.clients.matchAll({ type: 'window' });
+    clients.forEach(c => c.navigate(c.url));
+  })());
 });
-
-self.addEventListener('fetch', event => {
-    event.respondWith(
-      caches.match(event.request).then(response => {
-        if (response) {
-          // Check if it's a redirect response
-          if (response.status >= 300 && response.status < 400) {
-            // If it's a redirect, simply fetch from network.
-            return fetch(event.request);
-          }
-          return response; // Serve from cache if not a redirect
-        }
-        return fetch(event.request); // Fetch from network if not in cache
-      })
-    );
-  });

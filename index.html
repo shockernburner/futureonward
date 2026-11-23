@@ -1,253 +1,644 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-BD">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Future Onward</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solar EPC, Storage &amp; EV in Bangladesh | Future Onward OPC</title>
+  <meta name="description" content="Solar EPC with investment and PPA options, battery storage, electric trucks and buses, and the EraseAI Firewall, for businesses across Bangladesh.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://futureonward.com/">
+  <meta name="theme-color" content="#06101f">
+  <meta name="geo.region" content="BD-13">
+  <meta name="geo.placename" content="Dhaka">
 
-  <!-- Local font (fallback) and utility CSS (no external fetch) -->
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/tw.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Future Onward OPC">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://futureonward.com/">
+  <meta property="og:title" content="Future Onward OPC | Power Bangladesh onward">
+  <meta property="og:description" content="Solar EPC with zero-capex PPA options, battery storage, electric trucks and buses, and the EraseAI Firewall, for businesses in Bangladesh.">
+  <meta property="og:image" content="https://futureonward.com/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sunrise over solar-roofed factories in Bangladesh with the Future Onward OPC title">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Future Onward OPC | Power Bangladesh onward">
+  <meta name="twitter:description" content="Solar EPC with zero-capex PPA options, battery storage, electric trucks and buses, and the EraseAI Firewall, for businesses in Bangladesh.">
+  <meta name="twitter:image" content="https://futureonward.com/images/og.jpg">
 
-  <!-- Optional: PWA manifest -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preload" href="/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-
-    /* Background layers */
-    .bg-image {
-      background-image: url('images/home2.jpg'); /* using home2.jpg available in images */
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px);
-      transform: scale(1.05);
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://futureonward.com/#org",
+      "name": "Future Onward OPC",
+      "legalName": "Future Onward OPC",
+      "url": "https://futureonward.com/",
+      "logo": "https://futureonward.com/images/fo-mark.png",
+      "image": "https://futureonward.com/images/og.jpg",
+      "description": "Bangladesh company delivering solar EPC (industrial, residential and utility scale, with investment and power purchase agreements), battery energy storage, electric commercial vehicles and AI data-protection software.",
+      "email": "director@futureonward.com",
+      "telephone": "+8801746653647",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+      "areaServed": { "@type": "Country", "name": "Bangladesh" },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "director@futureonward.com",
+        "telephone": "+8801746653647",
+        "areaServed": "BD",
+        "availableLanguage": ["en", "bn"]
+      }],
+      "knowsAbout": ["Solar EPC", "Rooftop solar", "Net metering", "Power purchase agreement", "Battery energy storage", "Electric commercial vehicles", "AI data loss prevention"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://futureonward.com/#website",
+      "url": "https://futureonward.com/",
+      "name": "Future Onward OPC",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://futureonward.com/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://futureonward.com/#page",
+      "url": "https://futureonward.com/",
+      "name": "Solar EPC, Storage & EV in Bangladesh | Future Onward OPC",
+      "isPartOf": { "@id": "https://futureonward.com/#website" },
+      "about": { "@id": "https://futureonward.com/#org" },
+      "primaryImageOfPage": "https://futureonward.com/images/og.jpg",
+      "dateModified": "2026-11-23",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Future Onward OPC services in Bangladesh",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial and commercial rooftop solar EPC", "serviceType": "Solar EPC", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential rooftop solar with net metering", "serviceType": "Solar installation", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Utility-scale solar power plant EPC", "serviceType": "Solar EPC", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solar investment with power purchase agreement (zero capex)", "serviceType": "Power purchase agreement", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Battery energy storage systems (ESS)", "serviceType": "Energy storage", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electric trucks, buses and airport vehicles with charging", "serviceType": "Electric commercial vehicles", "areaServed": "BD", "provider": { "@id": "https://futureonward.com/#org" } } },
+        { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "EraseAI Firewall", "applicationCategory": "SecurityApplication", "operatingSystem": "Chrome, Android, Web", "url": "https://eraseai.ai" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can my factory get solar with no upfront investment?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, where the site qualifies. Under the investment and power purchase agreement (PPA) model, the solar plant is financed and built on your roof and you pay only for the electricity it produces, at an agreed per-unit rate. The rate and term are set per project after a site survey." } },
+        { "@type": "Question", "name": "How big can a rooftop solar system be under net metering in Bangladesh?", "acceptedAnswer": { "@type": "Answer", "text": "Under the Net Metering Guidelines 2025, rooftop solar can be sized up to 100% of your sanctioned load, up from 70% under the 2018 guidelines. We check the current rules and your utility's process during the survey." } },
+        { "@type": "Question", "name": "Does solar keep running during load shedding?", "acceptedAnswer": { "@type": "Answer", "text": "A grid-tied solar system switches off when the grid goes down, for safety. To keep running through load shedding you need a battery energy storage system (ESS) or a hybrid design, which we size to the loads you want to protect." } },
+        { "@type": "Question", "name": "What is EraseAI Firewall?", "acceptedAnswer": { "@type": "Answer", "text": "EraseAI Firewall, made by Vantward Solutions Pte. Ltd. in Singapore, checks what staff are about to send to ChatGPT, Claude or Gemini and holds the message if it finds personal data, card numbers, passwords or API keys. The Chrome extension is free; team plans add an admin dashboard and audit log. Future Onward OPC rolls it out for organisations in Bangladesh." } },
+        { "@type": "Question", "name": "Which areas of Bangladesh do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We are based in Dhaka and work on projects across Bangladesh, including industrial zones and EPZs. Send us your location and we will confirm a site visit." } }
+      ]
     }
-    .bg-dim {
-      background: radial-gradient(1200px 1200px at 30% 10%, rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
-                  linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
-    }
-
-    /* Vertical tab layout styles */
-    .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
-    .tab-item {
-      flex: 1 1 0%; /* distribute width evenly */
-      min-width: 2.5rem; /* ensure 5 tabs remain visible on small screens */
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow: hidden;
-      backdrop-filter: saturate(120%);
-    }
-  .tab-item.active { flex: 5 1 0%; min-width: 40%; }
-  /* Ensure inner flex can shrink so content scrolls */
-  .tab-item > .flex { min-height: 0; }
-  /* Hide non-active tab contents */
-  .tab-content { display: none; }
-    .tab-item.active .tab-content { display: block; }
-    /* Make active tab content scrollable on small screens */
-  .tab-item .tab-content { overflow-y: auto; -webkit-overflow-scrolling: touch; box-sizing: border-box; flex: 1 1 auto; min-height: 0; max-height: none; padding-right: .5rem; padding-left: .25rem; }
-  .tab-item .tab-content p, .tab-item .tab-content li { overflow-wrap: anywhere; word-break: break-word; }
-  /* Subtle scrollbar styling (scoped to tab content) */
-  .tab-item .tab-content { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.3) transparent; }
-  .tab-item .tab-content::-webkit-scrollbar { width: 8px; }
-  .tab-item .tab-content::-webkit-scrollbar-track { background: transparent; }
-  .tab-item .tab-content::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,.3); border-radius: 8px; }
-  .tab-item .tab-content::-webkit-scrollbar-thumb:hover { background-color: rgba(255,255,255,.45); }
-    /* Small screens: narrower tabs and smaller vertical labels */
-    @media (max-width: 480px) {
-      .tab-item { min-width: 2rem; }
-      .vertical-text { font-size: 1rem; }
-    }
-    /* Small screens: extra bottom padding to avoid overlap with floating buttons */
-    @media (max-width: 640px) {
-  .tab-item .tab-content { padding-bottom: 4.5rem; }
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col text-white">
-
-  <!-- Blurred image background and dim overlay -->
-  <div class="fixed inset-0 -z-20 bg-image"></div>
-  <div class="fixed inset-0 -z-10 bg-dim"></div>
-
-  <!-- Header & Tagline -->
-  <header class="bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
-      <h1 class="text-2xl md:text-3xl font-bold drop-shadow">Future Onward: Innovating Solutions for a Sustainable Tomorrow</h1>
-      <p class="mt-2 opacity-90">Empowering Progress Across Software, Energy, and Digital Landscapes.</p>
-    </div>
-  </header>
-
-  <main class="flex-1">
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 pt-10 pb-8">
-      <div class="rounded-xl p-6 md:p-8 text-center">
-        <h2 class="text-xl md:text-2xl font-semibold mb-4 drop-shadow">Driving the Future with Technology and Expertise.</h2>
-        <p class="leading-relaxed opacity-95">
-          Future Onward is a dynamic technology company committed to delivering cutting-edge solutions across key growth sectors. Through strategic partnerships and a deep understanding of market needs, we empower businesses and individuals with innovative software, sustainable energy systems, robust digital infrastructure, and comprehensive medical tourism services.
-        </p>
-      </div>
-    </section>
-
-    <!-- Our Scope -->
-  <section class="max-w-7xl mx-auto px-4 pb-10 flex flex-col items-center">
-      <h3 class="text-lg md:text-xl font-semibold mb-4 drop-shadow text-center">Our Scope</h3>
-      <p class="mb-6 opacity-95 text-center">
-        Future Onward specializes in a diverse portfolio of services, categorized into five core pillars: Software, Energy, Digital, Medical Tourism, and Retail Food (Bishojo).
-      </p>
-
-      <!-- Vertical Tabs Container -->
-  <div class="flex flex-row w-full h-[80vh] rounded-xl overflow-hidden">
-
-        <!-- Tab: Software -->
-  <div id="tab-software" class="tab-item active bg-indigo-600/60 hover:bg-indigo-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
-          <div class="flex flex-col h-full">
-            <h2 class="vertical-text text-3xl font-bold mb-4">Software</h2>
-            <div class="tab-content opacity-100 transition-opacity duration-500">
-      <p class="text-base leading-relaxed mb-3 opacity-95">
-                We develop bespoke software applications to streamline operations, enhance efficiency, and provide actionable insights. Our key offerings include:
-              </p>
-              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
-                <li><strong>Customized ERP:</strong> Flexible ERP with drag-and-drop functionality and a powerful dashboard creator leveraging LLMs for user-prompted customization.</li>
-                <li><strong>EV Charging Station ERP &amp; Mobile Apps:</strong> Planning, operation, and maintenance management for EV charging infrastructure.</li>
-                <li><strong>Content Management System (CMS):</strong> Archiving, indexing, and search across large document and media collections.</li>
-                <li><strong>Commercial Credit Scoring Prediction System:</strong> Data-driven models for accurate credit risk assessment.</li>
-                <li><strong>Document &amp; Media Archive, Index, and Search:</strong> Efficient storage, organization, and retrieval at scale.</li>
-                <li><strong>Inventory Management System:</strong> Real-time tracking and control across industries.</li>
-                <li><strong>EdTech Platform:</strong> Self-paced learning with engaging, personalized content.</li>
-                <li><strong>Flying Mission Planner &amp; Map Creation Tools:</strong> Software for drone/aerial operations enabling precise mission planning and detailed map generation.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab: Energy -->
-  <div id="tab-energy" class="tab-item bg-purple-600/60 hover:bg-purple-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
-          <div class="flex flex-col h-full">
-            <h2 class="vertical-text text-3xl font-bold mb-4">Energy</h2>
-            <div class="tab-content opacity-0 transition-opacity duration-500">
-      <p class="text-base leading-relaxed mb-3 opacity-95">
-                Energy Sector (Powered by Huawei). We are at the forefront of the renewable energy revolution in Bangladesh:
-              </p>
-              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
-                <li><strong>Complete Solar Power System Consultancy &amp; Implementation:</strong> End-to-end solar solutions with a strong focus on Energy Storage Systems (ESS).</li>
-                <li><strong>Net Metering Solutions:</strong> Advanced net metering leveraging Huawei’s state-of-the-art technology.</li>
-                <li><strong>EV Charging Station Planning &amp; Construction:</strong> From site assessment to full-scale buildout.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab: Digital -->
-  <div id="tab-digital" class="tab-item bg-emerald-600/60 hover:bg-emerald-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
-          <div class="flex flex-col h-full">
-            <h2 class="vertical-text text-3xl font-bold mb-4">Digital</h2>
-            <div class="tab-content opacity-0 transition-opacity duration-500">
-      <p class="text-base leading-relaxed mb-3 opacity-95">
-                Digital Services (Powered by Huawei). We deliver critical digital infrastructure:
-              </p>
-              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
-                <li><strong>Datacenter &amp; Cloud Solutions:</strong> Consultancy and implementation for scalable, secure foundations.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab: Medical Tourism -->
-  <div id="tab-medical" class="tab-item bg-sky-600/60 hover:bg-sky-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
-          <div class="flex flex-col h-full">
-            <h2 class="vertical-text text-3xl font-bold mb-4">Medical</h2>
-            <div class="tab-content opacity-0 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3 opacity-95">
-                Medical Tourism (ubermed.life). We guide patients from Bangladesh to world-class medical facilities with end-to-end support:
-              </p>
-              <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
-                <li><strong>Online Consultancy &amp; Checkups:</strong> Initial virtual consultations.</li>
-                <li><strong>Diagnosis &amp; In-Depth Checks:</strong> Facilitation of detailed examinations and accurate diagnoses.</li>
-                <li><strong>Surgical Coordination:</strong> Arranging and managing procedures with top hospitals.</li>
-                <li><strong>Patient Logistics:</strong> Visa assistance, accommodation, appointments, and interpreter services, with a primary focus on China.</li>
-              </ul>
-              <p class="mt-4 text-sm md:text-base">
-                Learn more: <a class="underline font-medium text-white hover:text-gray-100" href="https://ubermed.life" target="_blank" rel="noopener">ubermed.life</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab: Bishojo -->
-  <div id="tab-bishojo" class="tab-item bg-rose-600/60 hover:bg-rose-600/80 cursor-pointer flex flex-col justify-between p-6 text-white transform-gpu">
-          <div class="flex flex-col h-full">
-            <h2 class="vertical-text text-3xl font-bold mb-4">Bishojo</h2>
-            <div class="tab-content opacity-0 transition-opacity duration-500">
-              <p class="text-base leading-relaxed mb-3 opacity-95">
-                Bishojo Sushi — where tradition meets innovation, and every dish tells a story.
-              </p>
-              <p class="mt-4 text-sm md:text-base">
-                Visit: <a class="underline font-medium text-white hover:text-gray-100" href="https://bishojo.store" target="_blank" rel="noopener">bishojo.store</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  <!-- Retail Food Chain section removed; moved into Bishojo tab -->
-  </main>
-
-  <footer class="bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 py-6 text-sm opacity-80 text-center">
-      &copy; 2024 Future Onward OPC. All rights reserved.
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.tab-item');
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const isActive = tab.classList.contains('active');
-          if (!isActive) {
-            tabs.forEach(t => {
-              t.classList.remove('active');
-              const content = t.querySelector('.tab-content');
-              if (content) {
-                content.classList.remove('opacity-100');
-                content.classList.add('opacity-0');
-              }
-            });
-            tab.classList.add('active');
-            const activeContent = tab.querySelector('.tab-content');
-            if (activeContent) {
-              activeContent.classList.remove('opacity-0');
-              activeContent.classList.add('opacity-100');
-            }
-          }
-        });
-      });
-    });
+  ]
+}
   </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Floating contact buttons -->
-  <div class="fixed bottom-6 right-6 flex flex-col gap-3">
-    <!-- Call -->
-    <a href="tel:+8801746653647" aria-label="Call +8801746653647" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="Call">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.6 2.5a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.57-1.57a2 2 0 0 1 2.11-.45c.8.28 1.64.48 2.5.6A2 2 0 0 1 22 16.92z" />
-      </svg>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Future Onward OPC home">
+      <img src="/images/fo-mark.png" alt="" width="38" height="38">
+      <span><b>Future Onward</b><small>OPC · Bangladesh</small></span>
     </a>
-    <!-- WhatsApp -->
-    <a href="https://wa.me/8613949048330" target="_blank" rel="noopener" aria-label="WhatsApp +8613949048330" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="WhatsApp">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-6 h-6" fill="white">
-        <path d="M128 24a104 104 0 0 0-89.6 156.6L32 232l51.9-13.6A104 104 0 1 0 128 24zm0 16a88 88 0 1 1 0 176 87.2 87.2 0 0 1-45.1-12.5l-3.2-1.9-31.7 8.3 8.5-30.6-2-3.3A88 88 0 0 1 128 40zm45.7 98.4c-2.6-1.3-15.3-7.6-17.6-8.4s-4.1-1.3-5.8 1.3-6.7 8.4-8.2 10.1-3 1.9-5.6.6-10.9-4-20.8-12.7c-7.7-6.9-12.9-15.4-14.4-18s-.1-3.9 1.1-5.2c1.2-1.3 2.6-3.3 3.8-5s1.6-3.3 2.4-5.6.4-4.1-.2-5.6-5.8-14-8-19.2c-2.1-5.1-4.2-4.4-5.8-4.5l-5-.1a9.6 9.6 0 0 0-7 3.2c-2.4 2.6-9.2 9-9.2 22s9.4 25.5 10.7 27.3c1.3 1.7 18.4 28.1 44.6 39.4s26.7 7.1 31.5 6.7c4.8-.4 15.3-6.2 17.5-12.1 2.2-6 2.2-11.2 1.5-12.3-.6-1.1-2.4-1.8-5-3.1z"/>
-      </svg>
-    </a>
-    <!-- Email -->
-    <a href="mailto:director@futureonward.com" aria-label="Email director@futureonward.com" class="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center hover:bg-white/20 transition" title="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-        <path d="M4 8l8 5 8-5" />
-        <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
-      </svg>
-    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#solar">Solar</a>
+      <a href="#storage">Storage</a>
+      <a href="#ev">EV</a>
+      <a href="#software">AI Firewall</a>
+      <a href="#partners">Partners</a>
+      <a class="cta" href="#contact">Talk to us</a>
+    </nav>
   </div>
+</header>
+
+<nav class="rail" aria-label="Chapters">
+  <a href="#top"><span>Start</span></a>
+  <a href="#problem"><span>The problem</span></a>
+  <a href="#solar"><span>Solar EPC</span></a>
+  <a href="#storage"><span>Storage</span></a>
+  <a href="#savings"><span>Savings</span></a>
+  <a href="#ev"><span>EV</span></a>
+  <a href="#software"><span>AI Firewall</span></a>
+  <a href="#partners"><span>Partners</span></a>
+  <a href="#contact"><span>Contact</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-labelledby="h-hero">
+  <div class="hero-sky" aria-hidden="true"></div>
+  <div class="hero-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#ffe08a"/><stop offset=".55" stop-color="#ffb347"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="pv" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#3a7bd5"/><stop offset="1" stop-color="#1c3f7a"/>
+        </linearGradient>
+        <linearGradient id="river" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ff9b45" stop-opacity=".35"/><stop offset="1" stop-color="#0b1d3a" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g class="sun"><circle cx="1080" cy="250" r="170" fill="url(#sunG)"/><circle cx="1080" cy="250" r="62" fill="#ffd36e"/></g>
+      <!-- far skyline -->
+      <path d="M0 330h60v-40h40v40h30v-70h50v70h40v-30h60v30h50v-90h30v90h70v-50h40v50h60v-30h50v30h40v-60h60v60h50v-40h40v40h70v-80h30v80h60v-30h50v30h40v-50h60v50h70v-30h50v30h60v-60h40v60h60v190H0z" fill="#14254a"/>
+      <!-- factories with solar roofs -->
+      <g>
+        <path d="M80 400l70-40v40l70-40v40l70-40v40h40v120H80z" fill="#0d1a34"/>
+        <rect x="330" y="300" width="22" height="100" fill="#0d1a34"/>
+        <path d="M86 398l64-36v8l-64 36z M156 398l64-36v8l-64 36z M226 398l64-36v8l-64 36z" fill="url(#pv)" class="blink"/>
+        <path d="M520 420h300v100H520z" fill="#0b1730"/>
+        <path d="M530 414h280l-12-26H542z" fill="url(#pv)"/>
+        <path d="M542 388h256" stroke="#7fb6ff" stroke-opacity=".5"/>
+        <rect x="1180" y="380" width="200" height="140" fill="#0d1a34"/>
+        <path d="M1190 374h180l-10-24h-160z" fill="url(#pv)"/>
+      </g>
+      <!-- wind of the delta: river -->
+      <path d="M0 470c180-20 360 20 540 6s360-30 540-10 270 20 360 8v46H0z" fill="url(#river)"/>
+      <!-- utility solar field -->
+      <g fill="url(#pv)">
+        <path d="M880 470l40-22h70l-40 22z"/><path d="M970 470l40-22h70l-40 22z"/><path d="M1060 470l40-22h70l-40 22z"/>
+        <path d="M850 500l40-22h70l-40 22z"/><path d="M940 500l40-22h70l-40 22z"/><path d="M1030 500l40-22h70l-40 22z"/>
+      </g>
+      <!-- road + electric truck -->
+      <rect x="0" y="508" width="1440" height="12" fill="#0a1428"/>
+      <g class="truck">
+        <rect x="0" y="478" width="96" height="30" rx="4" fill="#e9eef7"/>
+        <rect x="96" y="486" width="34" height="22" rx="4" fill="#2f9bff"/>
+        <rect x="104" y="490" width="16" height="9" rx="2" fill="#bfe0ff"/>
+        <circle cx="24" cy="510" r="8" fill="#111"/><circle cx="110" cy="510" r="8" fill="#111"/>
+        <path d="M40 486l8 0-4 8h7l-12 12 3-9h-6z" fill="#12b886"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kicker rv"><span class="flag" aria-hidden="true"></span>Future Onward OPC · Made for Bangladesh</span>
+      <h1 id="h-hero" class="rv" style="--d:.08s">Bangladesh has the sun.<br><em>Let's put it to work.</em></h1>
+      <p class="lede rv" style="--d:.16s">We design, finance and build solar power plants, battery storage and electric fleets for Bangladeshi businesses, and protect their data when staff use AI. One partner, from roof survey to power bill.</p>
+      <p class="bn rv" style="--d:.2s" lang="bn">বাংলাদেশের জন্য পরিচ্ছন্ন বিদ্যুৎ, ইলেকট্রিক যানবাহন ও নিরাপদ সফটওয়্যার।</p>
+      <div class="btns rv" style="--d:.24s">
+        <a class="btn primary" href="#contact">Get a free site assessment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn wa" href="https://wa.me/8801746653647?text=Hello%20Future%20Onward%2C%20I%27d%20like%20to%20discuss%20a%20B2B%20project." target="_blank" rel="noopener">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128 24a104 104 0 0 0-89.6 156.6L32 232l51.9-13.6A104 104 0 1 0 128 24zm0 16a88 88 0 1 1 0 176 87.2 87.2 0 0 1-45.1-12.5l-3.2-1.9-31.7 8.3 8.5-30.6-2-3.3A88 88 0 0 1 128 40zm45.7 98.4c-2.6-1.3-15.3-7.6-17.6-8.4s-4.1-1.3-5.8 1.3-6.7 8.4-8.2 10.1-3 1.9-5.6.6-10.9-4-20.8-12.7c-7.7-6.9-12.9-15.4-14.4-18s-.1-3.9 1.1-5.2c1.2-1.3 2.6-3.3 3.8-5s1.6-3.3 2.4-5.6.4-4.1-.2-5.6-5.8-14-8-19.2c-2.1-5.1-4.2-4.4-5.8-4.5l-5-.1a9.6 9.6 0 0 0-7 3.2c-2.4 2.6-9.2 9-9.2 22s9.4 25.5 10.7 27.3c1.3 1.7 18.4 28.1 44.6 39.4s26.7 7.1 31.5 6.7c4.8-.4 15.3-6.2 17.5-12.1 2.2-6 2.2-11.2 1.5-12.3-.6-1.1-2.4-1.8-5-3.1z"/></svg>
+          WhatsApp us</a>
+      </div>
+      <ul class="chips rv" style="--d:.3s" aria-label="What we do">
+        <li>Solar EPC</li><li>Investment + PPA</li><li>Battery storage</li><li>Electric trucks &amp; buses</li><li>EraseAI Firewall</li>
+      </ul>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll the story<i></i></div>
+</section>
+
+<!-- ============ CHAPTER 1: PROBLEM ============ -->
+<section class="chapter" id="problem" aria-labelledby="h-problem">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 1 · The bill</span>
+    <h2 id="h-problem" class="rv">Every month, the power bill <em>gets heavier.</em></h2>
+    <p class="intro rv">Gas is short, imported fuel is expensive, and tariffs keep being revised upward. When the grid cuts out, factories start diesel generators and pay twice. Meanwhile Bangladesh gets strong sunshine all year, and new rules make it easier than ever to use it.</p>
+
+    <div class="stats">
+      <div class="stat rv">
+        <div class="n">Tk 12.5–16.4<small> /unit</small></div>
+        <p>What medium-voltage industrial consumers pay for grid electricity after BERC's latest tariff revision.</p>
+        <cite>Source <a href="#src1">[1]</a></cite>
+      </div>
+      <div class="stat rv" style="--d:.08s">
+        <div class="n">100%<small> of load</small></div>
+        <p>Rooftop solar can now be sized up to your full sanctioned load under the Net Metering Guidelines 2025, up from 70%.</p>
+        <cite>Source <a href="#src2">[2]</a></cite>
+      </div>
+      <div class="stat rv" style="--d:.16s">
+        <div class="n">Tk 10.50<small> /kWh</small></div>
+        <p>Paid for surplus rooftop solar exported to the grid under net metering, for eligible systems installed by 28 Feb 2027.</p>
+        <cite>Source <a href="#src3">[3]</a></cite>
+      </div>
+      <div class="stat rv" style="--d:.24s">
+        <div class="n">1 GW<small> and rising</small></div>
+        <p>Rooftop solar installed in Bangladesh, against a national rooftop target of 3,000 MW. The shift has started.</p>
+        <cite>Sources <a href="#src4">[4]</a> <a href="#src5">[5]</a></cite>
+      </div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>Factory owners &amp; MDs</li><li>CFOs watching energy cost</li><li>RMG &amp; textile exporters facing buyer carbon targets</li><li>Anyone running diesel in load shedding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 2: SOLAR EPC ============ -->
+<section class="chapter" id="solar" aria-labelledby="h-solar">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 2 · Solar EPC</span>
+    <h2 id="h-solar" class="rv">Your roof, your land, <em>your power plant.</em></h2>
+    <p class="intro rv">We handle engineering, procurement and construction end to end: site survey, design and yield simulation, utility and net-metering approvals, installation with Huawei smart inverters, commissioning, then monitoring and maintenance.</p>
+
+    <div class="grid g3">
+      <article class="card track rv">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 21V10l6 3V10l6 3V10l6 3v8z"/><path d="M6 21v-3M12 21v-3M18 21v-3"/></svg></div>
+        <span class="tag">Industrial &amp; commercial</span>
+        <h3>Rooftop solar for factories and buildings</h3>
+        <p>Cut daytime grid and diesel use where your load is biggest. Net metering lets surplus units flow back to the grid.</p>
+        <ul class="ticks"><li>Small commercial roofs to multi-MW sites</li><li>Structural check of every roof</li><li>Net-metering application handled</li></ul>
+        <p class="for"><b>Who this is for:</b> RMG, textile, pharma, food, steel, cold storage, warehouses, hospitals, malls, office towers and EPZ units.</p>
+      </article>
+      <article class="card track rv" style="--d:.08s">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v10H3z"/><path d="M9 21v-6h6v6"/></svg></div>
+        <span class="tag">Residential</span>
+        <h3>Rooftop solar for homes and apartments</h3>
+        <p>Lower bills for houses and apartment buildings, with optional batteries so fans, lights and the fridge stay on when power goes.</p>
+        <ul class="ticks"><li>Single-phase net metering now allowed</li><li>Huawei inverter + app monitoring</li><li>Battery backup option</li></ul>
+        <p class="for"><b>Who this is for:</b> homeowners, apartment owners' associations and developers building new residential projects.</p>
+      </article>
+      <article class="card track rv" style="--d:.16s">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M3 21l3-8h12l3 8z"/><path d="M9 13l-1 8M15 13l1 8M4.5 17h15"/></svg></div>
+        <span class="tag">Utility scale</span>
+        <h3>Solar power plants</h3>
+        <p>Ground-mounted plants that sell power to the grid. We bring EPC delivery, Huawei technology and the option of co-investment.</p>
+        <ul class="ticks"><li>Feasibility and yield studies</li><li>Grid connection engineering</li><li>EPC delivery through commissioning</li></ul>
+        <p class="for"><b>Who this is for:</b> IPP sponsors, landowners with suitable land, and investors looking at Bangladesh's renewable pipeline.</p>
+      </article>
+    </div>
+
+    <h3 class="subhead rv">Two ways to pay, so the decision is easy</h3>
+    <div class="models">
+      <div class="model rv">
+        <span class="badge" style="background:#d6deea">Buy (CAPEX)</span>
+        <h3>You own the plant</h3>
+        <p>You invest once and keep every unit it generates. Best when you have the capital and want the highest long-term saving.</p>
+      </div>
+      <div class="model hl rv" style="--d:.08s">
+        <span class="badge">Investment + PPA</span>
+        <h3>Zero upfront cost</h3>
+        <p>Where the site qualifies, we arrange the investment, build the plant on your roof and you pay only for the electricity it produces, at an agreed per-unit rate under a power purchase agreement. No capital spent, saving from day one.</p>
+      </div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>Owners who want ownership (CAPEX)</li><li>Businesses that want savings without capital (PPA)</li><li>Groups with several factories</li><li>Developers &amp; IPP investors</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 3: STORAGE ============ -->
+<section class="chapter" id="storage" aria-labelledby="h-storage">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 3 · Energy storage</span>
+    <h2 id="h-storage" class="rv">When the grid goes dark, <em>keep the lines running.</em></h2>
+    <p class="intro rv">A grid-tied solar system switches off during an outage, for safety. A battery energy storage system (ESS) changes that. It stores solar and off-peak power, keeps critical loads alive through load shedding, and can supply your evening peak so you buy less at the most expensive hours.</p>
+
+    <div class="flow rv" role="img" aria-label="Diagram: solar panels and the grid feed a Huawei inverter, which charges the battery and powers the factory and EV chargers">
+      <svg viewBox="0 0 900 300">
+        <path class="wire" d="M140 80H420M140 220H420M480 150H760M450 180v80M760 150v-60M760 150v60"/>
+        <path class="pulse" stroke="#ffc247" d="M140 80H420"/>
+        <path class="pulse" stroke="#2f9bff" d="M140 220H420"/>
+        <path class="pulse" stroke="#12b886" d="M480 150H760"/>
+        <path class="pulse" stroke="#12b886" d="M450 180v80"/>
+        <path class="pulse" stroke="#12b886" d="M760 150v-60M760 150v60"/>
+        <g><rect x="30" y="50" width="110" height="60" rx="12" fill="#13243f" stroke="#ffc247"/><text x="85" y="78" text-anchor="middle">Solar PV</text><text class="lbl" x="85" y="96" text-anchor="middle">rooftop / ground</text></g>
+        <g><rect x="30" y="190" width="110" height="60" rx="12" fill="#13243f" stroke="#2f9bff"/><text x="85" y="218" text-anchor="middle">Grid</text><text class="lbl" x="85" y="236" text-anchor="middle">net metering</text></g>
+        <g><rect x="400" y="110" width="100" height="80" rx="14" fill="#13243f" stroke="#ff8a2a"/><text x="450" y="146" text-anchor="middle">Inverter</text><text class="lbl" x="450" y="164" text-anchor="middle">Huawei</text></g>
+        <g><rect x="395" y="250" width="110" height="44" rx="12" fill="#13243f" stroke="#12b886"/><text x="450" y="277" text-anchor="middle">Battery ESS</text></g>
+        <g><rect x="700" y="40" width="130" height="50" rx="12" fill="#13243f" stroke="#12b886"/><text x="765" y="70" text-anchor="middle">Factory load</text></g>
+        <g><rect x="700" y="210" width="130" height="50" rx="12" fill="#13243f" stroke="#12b886"/><text x="765" y="240" text-anchor="middle">EV chargers</text></g>
+      </svg>
+    </div>
+
+    <div class="grid g3">
+      <div class="card rv"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 10v4M7 10v4M11 10v4"/></svg></div><h3>Backup through load shedding</h3><p>Critical machines, cold rooms, servers and lifts stay on. Less diesel, less noise, fewer stoppages.</p></div>
+      <div class="card rv" style="--d:.08s"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg></div><h3>Peak shaving</h3><p>Charge from solar or off-peak power, discharge in the evening peak, and flatten your demand.</p></div>
+      <div class="card rv" style="--d:.16s"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>More solar, used</h3><p>Store midday surplus instead of exporting it, and use your own clean power after sunset.</p></div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>Factories with sensitive machines</li><li>Hospitals &amp; clinics</li><li>Data rooms &amp; telecom sites</li><li>Cold storage &amp; agro-processing</li><li>Homes with frequent outages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 4: SAVINGS ============ -->
+<section class="chapter" id="savings" aria-labelledby="h-savings">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 4 · The saving</span>
+    <h2 id="h-savings" class="rv">How much could <em>your roof</em> save?</h2>
+    <p class="intro rv">Move the sliders. This is a quick, honest estimate built on stated assumptions, not a quote. Your real figure comes from a free site survey of your roof, load profile and bills.</p>
+
+    <div class="calc rv">
+      <div class="panel">
+        <div class="field">
+          <label for="kwp">Solar system size <output id="kwpOut" for="kwp">500 kWp</output></label>
+          <input id="kwp" type="range" min="5" max="3000" step="5" value="500">
+          <div class="hint">A typical home: 3–10 kWp. A mid-size factory roof: 300–1,500 kWp.</div>
+        </div>
+        <div class="field">
+          <label for="tariff">Your grid tariff <output id="tariffOut" for="tariff">Tk 13.00 /unit</output></label>
+          <input id="tariff" type="range" min="6" max="18" step="0.25" value="13">
+          <div class="hint">Find the per-unit rate on your bill (medium-voltage industry: about Tk 12.5–16.4 <a href="#src1">[1]</a>).</div>
+        </div>
+      </div>
+      <div class="panel result" aria-live="polite">
+        <div class="row"><span>Solar units per year</span><strong id="rGen">625,000 kWh</strong></div>
+        <div class="row big"><span>Saving per year</span><strong id="rYear">Tk 81.3 lakh</strong></div>
+        <div class="row"><span>Saving over 25 years</span><strong id="r25">Tk 19.2 crore</strong></div>
+        <div class="row"><span>Roof area needed (approx.)</span><strong id="rRoof">40,000–50,000 sq ft</strong></div>
+        <p class="fine">Assumptions: 1,250 kWh generated per kWp per year (a conservative figure for Bangladesh's climate; your survey replaces it), every unit used on site at your tariff, tariff held flat (it has been rising), panel output falling 0.5% a year, and 80–100 sq ft of roof per kWp. Not included: system cost, financing, maintenance or diesel savings.</p>
+      </div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>CFOs building a business case</li><li>Owners comparing CAPEX vs PPA</li><li>Homeowners sizing a system</li><li>Sustainability teams reporting to buyers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 5: EV ============ -->
+<section class="chapter" id="ev" aria-labelledby="h-ev">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 5 · Electric mobility</span>
+    <h2 id="h-ev" class="rv">Then the trucks <em>go electric.</em></h2>
+    <p class="intro rv">Trucks and buses run on imported diesel, and fuel is one of their biggest running costs. With CHTC Kinwin of Nanjing we bring electric commercial vehicles for fixed routes and yards, and we build the charging, powered by your own solar where possible.</p>
+
+    <div class="grid g4">
+      <div class="card rv"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 7h12v9H2zM14 10h4l4 3v3h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3>Electric heavy trucks</h3><p>Port, container-depot and factory-to-port haulage on repeatable routes.</p></div>
+      <div class="card rv" style="--d:.06s"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M3 11h18"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></div><h3>Electric buses</h3><p>Staff transport for factories and EPZs, campus and city routes.</p></div>
+      <div class="card rv" style="--d:.12s"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 13l8-2 6-7 2 1-3 6 5-1 2 2-6 3-4 6-2-1 1-5-6 1z"/></svg></div><h3>Airport ground equipment</h3><p>Electric shuttle buses and apron vehicles for ground handlers.</p></div>
+      <div class="card rv" style="--d:.18s"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7z"/></svg></div><h3>Charging, designed in</h3><p>Depot charging planned and built with the site's solar and storage, from survey to commissioning.</p></div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>Port &amp; ICD operators</li><li>Logistics &amp; freight fleets</li><li>RMG groups running staff buses</li><li>Airport ground handlers</li><li>Cement, steel &amp; mining yards</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 6: SOFTWARE ============ -->
+<section class="chapter" id="software" aria-labelledby="h-software">
+  <div class="wrap">
+    <span class="eyebrow rv">Chapter 6 · Software</span>
+    <h2 id="h-software" class="rv">Your team uses AI. <em>Your data shouldn't leak.</em></h2>
+    <p class="intro rv">Across Bangladesh, staff paste customer lists, bank statements and passwords into ChatGPT to save time. EraseAI Firewall, built by our partner Vantward Solutions in Singapore, checks the message at the Send button, before it leaves the computer or phone. Future Onward brings it to Bangladeshi organisations, with local rollout and support.</p>
+
+    <div class="grid g2">
+      <div class="demo rv" id="demo" aria-label="Illustration of EraseAI Firewall holding a message">
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="msg" id="demoMsg">Summarise this complaint from our client. Card <mark data-clean="[CARD_1]">4111 1111 1111 1111</mark>, portal password <mark data-clean="[PASSWORD_1]">Dhaka@2026!</mark></div>
+        <div class="gate">
+          <b id="gateTitle">EraseAI held this message</b>
+          <span id="gateText" style="color:#c3cfe0;font-size:.86rem">Found: a card number and a password.</span>
+          <div class="acts"><span>Cancel</span><span class="on" id="sanBtn">Sanitize &amp; Send</span><span>Send Anyway</span></div>
+        </div>
+        <p class="note">Illustration with a test card number. The real check runs in ChatGPT, Claude and Gemini.</p>
+      </div>
+      <div class="rv" style="--d:.08s">
+        <ul class="ticks">
+          <li>Checks prompts before they reach ChatGPT, Claude and Gemini (and Replit in Chrome)</li>
+          <li>Finds personal data, card numbers, passwords and API keys using rules and validators such as the card checksum</li>
+          <li>The user chooses: Cancel, Sanitize &amp; Send with placeholders, or Send Anyway</li>
+          <li>Chrome extension and Android app; free Chrome checks run on the device</li>
+          <li>Team plans add an admin dashboard, invite links and an audit log with CSV export, never storing message text</li>
+        </ul>
+        <div class="price" aria-label="Plans">
+          <span>Chrome extension <b>Free</b></span>
+          <span>Personal <b>$5/mo</b></span>
+          <span>Teams <b>$9/person/mo</b> (3–10)</span>
+          <span>Enterprise <b>contact us</b></span>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="mailto:director@futureonward.com?subject=EraseAI%20Firewall%20for%20our%20organisation%20(Bangladesh)">Ask for a team pilot</a>
+          <a class="btn" href="https://eraseai.ai" target="_blank" rel="noopener">eraseai.ai</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul>
+        <li>Banks, NBFIs &amp; mobile financial services</li><li>IT, BPO &amp; software exporters</li><li>RMG holding buyer data</li><li>Hospitals &amp; diagnostics</li><li>Law, audit &amp; consulting firms</li><li>Telecom &amp; e-commerce</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="chapter" id="process" aria-labelledby="h-process">
+  <div class="wrap">
+    <span class="eyebrow rv">How we work</span>
+    <h2 id="h-process" class="rv">From first call to <em>first kilowatt-hour.</em></h2>
+    <ol class="steps">
+      <li class="rv"><b>Talk &amp; bill review</b><span>Send us 12 months of bills on email or WhatsApp. We read your load and tariff.</span></li>
+      <li class="rv" style="--d:.06s"><b>Free site survey</b><span>Roof, structure, shading, electrical room and space for storage or chargers.</span></li>
+      <li class="rv" style="--d:.12s"><b>Design &amp; offer</b><span>Yield simulation and a clear offer, as a purchase or as investment + PPA.</span></li>
+      <li class="rv" style="--d:.18s"><b>Approvals &amp; build</b><span>Utility and net-metering paperwork, procurement and safe installation.</span></li>
+      <li class="rv" style="--d:.24s"><b>Monitor &amp; maintain</b><span>Live monitoring through Huawei's app, cleaning and preventive maintenance.</span></li>
+    </ol>
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul><li>First-time solar buyers</li><li>Procurement &amp; engineering teams</li><li>Banks financing green projects</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="chapter" id="partners" aria-labelledby="h-partners">
+  <div class="wrap">
+    <span class="eyebrow rv">Official partners</span>
+    <h2 id="h-partners" class="rv">World-class technology, <em>delivered in Bangladesh.</em></h2>
+    <p class="intro rv">We work with established manufacturers and specialists, and stay accountable on the ground here.</p>
+
+    <div class="partners">
+      <article class="partner rv">
+        <div class="logo"><img src="/images/partners/huawei.svg" alt="Huawei logo" width="70" height="90" loading="lazy"></div>
+        <div class="body">
+          <span class="role">Solar &amp; storage technology</span>
+          <h3>Huawei Technologies Co., Ltd.</h3>
+          <p class="zh">Shenzhen, China</p>
+          <p>Smart PV inverters, battery energy storage and the FusionSolar monitoring platform from Huawei Digital Power.</p>
+          <a href="https://solar.huawei.com" target="_blank" rel="noopener">solar.huawei.com</a>
+        </div>
+      </article>
+      <article class="partner rv" style="--d:.06s">
+        <div class="logo"><img src="/images/partners/vantward.png" alt="Vantward Solutions logo" width="92" height="92" loading="lazy" style="max-height:92px"></div>
+        <div class="body">
+          <span class="role">Software</span>
+          <h3>Vantward Solutions Pte. Ltd.</h3>
+          <p class="zh">Singapore · Reg. No. 202606980C</p>
+          <p>Software studio and maker of EraseAI Firewall, the AI data-protection tool we roll out in Bangladesh.</p>
+          <a href="https://vantward.com" target="_blank" rel="noopener">vantward.com</a>
+        </div>
+      </article>
+      <article class="partner rv" style="--d:.12s">
+        <div class="logo"><span class="mk" style="flex-direction:column;gap:2px"><span style="font-size:.8rem;letter-spacing:.3em;color:#555">CHTC</span><span style="font-size:1.7rem;letter-spacing:.04em;color:#0b5fae">KINWIN</span></span></div>
+        <div class="body">
+          <span class="role">Electric vehicles</span>
+          <h3>CHTC Kinwin (Nanjing) Automobile</h3>
+          <p class="zh">Nanjing, Jiangsu, China</p>
+          <p>Electric heavy trucks, buses, airport equipment, loaders and mining vehicles, with in-house electric drive systems.</p>
+        </div>
+      </article>
+      <article class="partner rv" style="--d:.18s">
+        <div class="logo"><span class="mk" style="flex-direction:column;gap:2px"><span style="font-size:1.6rem;letter-spacing:.12em">川港</span><span style="font-size:.78rem;letter-spacing:.24em;color:#444">CHUANGANG</span></span></div>
+        <div class="body">
+          <span class="role">Partner · Hong Kong</span>
+          <h3>Chuangang (Hong Kong) Petrochemical Co., Limited</h3>
+          <p class="zh">川港(香港)石油化工有限公司 · Hong Kong</p>
+          <p>Official partner of Future Onward OPC, based in Hong Kong.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul><li>Buyers who need trusted brands</li><li>Lenders &amp; investors doing due diligence</li><li>Procurement teams checking warranties</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="chapter" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <span class="eyebrow rv">Questions</span>
+    <h2 id="h-faq" class="rv">Straight answers.</h2>
+    <div class="faq">
+      <details class="rv"><summary>Can my factory get solar with no upfront investment?</summary><p>Yes, where the site qualifies. Under the investment and power purchase agreement (PPA) model, the solar plant is financed and built on your roof and you pay only for the electricity it produces, at an agreed per-unit rate. The rate and term are set per project after a site survey.</p></details>
+      <details class="rv"><summary>How big can a rooftop solar system be under net metering in Bangladesh?</summary><p>Under the Net Metering Guidelines 2025, rooftop solar can be sized up to 100% of your sanctioned load, up from 70% under the 2018 guidelines. We check the current rules and your utility's process during the survey.</p></details>
+      <details class="rv"><summary>Does solar keep running during load shedding?</summary><p>A grid-tied solar system switches off when the grid goes down, for safety. To keep running through load shedding you need a battery energy storage system (ESS) or a hybrid design, which we size to the loads you want to protect.</p></details>
+      <details class="rv"><summary>What is EraseAI Firewall?</summary><p>EraseAI Firewall, made by Vantward Solutions Pte. Ltd. in Singapore, checks what staff are about to send to ChatGPT, Claude or Gemini and holds the message if it finds personal data, card numbers, passwords or API keys. The Chrome extension is free; team plans add an admin dashboard and audit log. Future Onward OPC rolls it out for organisations in Bangladesh.</p></details>
+      <details class="rv"><summary>Which areas of Bangladesh do you serve?</summary><p>We are based in Dhaka and work on projects across Bangladesh, including industrial zones and EPZs. Send us your location and we will confirm a site visit.</p></details>
+    </div>
+    <div class="who rv">
+      <b>Who this is for</b>
+      <ul><li>Anyone deciding whether to start</li><li>Teams preparing an internal proposal</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <span class="eyebrow rv">Let's talk business</span>
+    <h2 id="h-contact" class="rv" style="font-size:clamp(2rem,4.4vw,3.3rem);font-weight:800;margin-top:14px">Tell us about your site. <em style="font-style:normal;color:var(--sun-2)">We'll take it from there.</em></h2>
+    <p class="intro rv">B2B enquiries by email or WhatsApp. Fill in the short brief and it opens ready to send in your email app or WhatsApp. Nothing is stored on this website.</p>
+
+    <div class="contact-grid">
+      <form class="brief rv" id="brief" novalidate>
+        <div class="two">
+          <label>Company<input name="company" autocomplete="organization" required></label>
+          <label>Your name<input name="name" autocomplete="name" required></label>
+        </div>
+        <div class="two">
+          <label>Interested in
+            <select name="service">
+              <option>Industrial rooftop solar</option>
+              <option>Residential solar</option>
+              <option>Solar power plant</option>
+              <option>Solar with investment + PPA</option>
+              <option>Battery storage (ESS)</option>
+              <option>Electric trucks / buses</option>
+              <option>EraseAI Firewall</option>
+            </select>
+          </label>
+          <label>Location (district / zone)<input name="location" placeholder="e.g. Gazipur, Chattogram EPZ"></label>
+        </div>
+        <label>Monthly electricity bill (optional)<input name="bill" inputmode="numeric" placeholder="e.g. Tk 25 lakh"></label>
+        <label>Message<textarea name="msg" placeholder="Roof size, sanctioned load, fleet size or team size..."></textarea></label>
+        <div class="btns">
+          <button class="btn primary" type="submit" data-via="email">Send by email</button>
+          <button class="btn wa" type="submit" data-via="wa">Send on WhatsApp</button>
+        </div>
+      </form>
+
+      <div class="direct rv" style="--d:.08s">
+        <a class="line" href="mailto:director@futureonward.com?subject=B2B%20enquiry%20-%20Future%20Onward%20OPC">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ffc247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span><b>Email</b><span>director@futureonward.com</span></span>
+        </a>
+        <a class="line" href="https://wa.me/8801746653647?text=Hello%20Future%20Onward%2C%20I%27d%20like%20to%20discuss%20a%20B2B%20project." target="_blank" rel="noopener">
+          <svg viewBox="0 0 256 256" fill="#25d366" aria-hidden="true"><path d="M128 24a104 104 0 0 0-89.6 156.6L32 232l51.9-13.6A104 104 0 1 0 128 24zm0 16a88 88 0 1 1 0 176 87.2 87.2 0 0 1-45.1-12.5l-3.2-1.9-31.7 8.3 8.5-30.6-2-3.3A88 88 0 0 1 128 40zm45.7 98.4c-2.6-1.3-15.3-7.6-17.6-8.4s-4.1-1.3-5.8 1.3-6.7 8.4-8.2 10.1-3 1.9-5.6.6-10.9-4-20.8-12.7c-7.7-6.9-12.9-15.4-14.4-18s-.1-3.9 1.1-5.2c1.2-1.3 2.6-3.3 3.8-5s1.6-3.3 2.4-5.6.4-4.1-.2-5.6-5.8-14-8-19.2c-2.1-5.1-4.2-4.4-5.8-4.5l-5-.1a9.6 9.6 0 0 0-7 3.2c-2.4 2.6-9.2 9-9.2 22s9.4 25.5 10.7 27.3c1.3 1.7 18.4 28.1 44.6 39.4s26.7 7.1 31.5 6.7c4.8-.4 15.3-6.2 17.5-12.1 2.2-6 2.2-11.2 1.5-12.3-.6-1.1-2.4-1.8-5-3.1z"/></svg>
+          <span><b>WhatsApp</b><span>+880 1746-653647</span></span>
+        </a>
+        <a class="line" href="tel:+8801746653647">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2f9bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2z"/></svg>
+          <span><b>Call</b><span>+880 1746-653647</span></span>
+        </a>
+        <a class="line" href="https://www.google.com/maps?q=23.818705,90.431952" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12b886" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><b>Office</b><span>Dhaka, Bangladesh · open in Maps</span></span>
+        </a>
+        <div class="who" style="margin-top:6px">
+          <b>Who this is for</b>
+          <ul><li>Business owners &amp; directors</li><li>Procurement &amp; facilities managers</li><li>Investors &amp; developers</li><li>IT &amp; security heads</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><b style="color:#fff">Future Onward OPC</b><br>Solar EPC · Energy storage · Electric mobility · AI security<br>Dhaka, Bangladesh</div>
+      <div><a href="mailto:director@futureonward.com">director@futureonward.com</a><br><a href="https://wa.me/8801746653647" target="_blank" rel="noopener">WhatsApp +880 1746-653647</a></div>
+    </div>
+    <div class="sources">
+      <b>Sources</b>
+      <ol>
+        <li id="src1">The Business Standard, "Power tariff hiked 16.7% as govt moves to cut subsidy burden" (BERC retail tariff revision). <a href="https://www.tbsnews.net/bangladesh/energy/retail-power-tariff-hiked-tk152-amid-subsidy-cuts-1453181" target="_blank" rel="noopener">tbsnews.net</a></li>
+        <li id="src2">pv magazine, "Bangladesh revises net metering rules to expand solar", 10 Sep 2025. <a href="https://www.pv-magazine.com/2025/09/10/bangladesh-revises-net-metering-rules-to-expand-solar/" target="_blank" rel="noopener">pv-magazine.com</a></li>
+        <li id="src3">pv magazine, "Bangladesh introduces $0.086/kWh tariff for net-metered rooftop solar", 2 Sep 2026. <a href="https://www.pv-magazine.com/2026/09/02/bangladesh-introduces-0-086-kwh-tariff-for-net-metered-rooftop-solar/" target="_blank" rel="noopener">pv-magazine.com</a></li>
+        <li id="src4">pv magazine, "Bangladesh hits 1 GW rooftop solar capacity", 5 Aug 2026. <a href="https://www.pv-magazine.com/2026/08/05/bangladesh-hits-1-gw-rooftop-solar-capacity/" target="_blank" rel="noopener">pv-magazine.com</a></li>
+        <li id="src5">IEEFA, "Rooftop solar target: Bangladesh faces tight timeline, capacity hurdles". <a href="https://ieefa.org/articles/rooftop-solar-target-bangladesh-faces-tight-timeline-capacity-hurdles" target="_blank" rel="noopener">ieefa.org</a></li>
+      </ol>
+    </div>
+    <div>&copy; <span id="yr">2026</span> Future Onward OPC. All rights reserved. Huawei, Vantward, EraseAI, CHTC Kinwin and Chuangang names and logos belong to their respective owners.</div>
+  </div>
+</footer>
+
+<div class="float" aria-label="Quick contact">
+  <a class="f-wa" href="https://wa.me/8801746653647?text=Hello%20Future%20Onward%2C%20I%27d%20like%20to%20discuss%20a%20B2B%20project." target="_blank" rel="noopener" aria-label="WhatsApp Future Onward">
+    <svg viewBox="0 0 256 256" fill="#fff" aria-hidden="true"><path d="M128 24a104 104 0 0 0-89.6 156.6L32 232l51.9-13.6A104 104 0 1 0 128 24zm0 16a88 88 0 1 1 0 176 87.2 87.2 0 0 1-45.1-12.5l-3.2-1.9-31.7 8.3 8.5-30.6-2-3.3A88 88 0 0 1 128 40zm45.7 98.4c-2.6-1.3-15.3-7.6-17.6-8.4s-4.1-1.3-5.8 1.3-6.7 8.4-8.2 10.1-3 1.9-5.6.6-10.9-4-20.8-12.7c-7.7-6.9-12.9-15.4-14.4-18s-.1-3.9 1.1-5.2c1.2-1.3 2.6-3.3 3.8-5s1.6-3.3 2.4-5.6.4-4.1-.2-5.6-5.8-14-8-19.2c-2.1-5.1-4.2-4.4-5.8-4.5l-5-.1a9.6 9.6 0 0 0-7 3.2c-2.4 2.6-9.2 9-9.2 22s9.4 25.5 10.7 27.3c1.3 1.7 18.4 28.1 44.6 39.4s26.7 7.1 31.5 6.7c4.8-.4 15.3-6.2 17.5-12.1 2.2-6 2.2-11.2 1.5-12.3-.6-1.1-2.4-1.8-5-3.1z"/></svg><span class="fl">WhatsApp</span>
+  </a>
+  <a class="f-mail" href="mailto:director@futureonward.com?subject=B2B%20enquiry%20-%20Future%20Onward%20OPC" aria-label="Email Future Onward">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1b0d00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="fl">Email</span>
+  </a>
+</div>
+
+<script src="/js/site.js" defer></script>
 </body>
 </html>
